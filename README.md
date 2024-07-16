@@ -21,7 +21,7 @@ The Terasic DE1-SoC is a versatile development and education platform integratin
 If you're new to the Terasic DE1-SoC or FPGA development in general, start by reading the README.md file in each project folder. It provides setup instructions, usage guidelines, and insights into the project goals and outcomes.
 
 ## User Manual
-You can find the user manual for the Terasic DE1-SoC board [here](docs/DE1-SoC_User_Manual_revf.pdf).
+You can find the user manual for the Terasic DE1-SoC board [here](docs/DE1-SoC_User_manual_revf.pdf).
 
 ## Useful Resources
 -  [Terasic Official Website](https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&CategoryNo=205&No=836&PartNo=1#contents)
