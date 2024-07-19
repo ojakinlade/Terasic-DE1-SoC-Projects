@@ -26,7 +26,7 @@ You can find the user manual for the Terasic DE1-SoC board [here](docs/DE1-SoC_U
 ## Useful Resources
 -  [Terasic Official Website](https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&CategoryNo=205&No=836&PartNo=1#contents)
 -  **Embedded SoPC Design with Nios II Processor and VHDL Examples** by Pong P. Chu
--  [Intel FPGA University Program](https://fpgacademy.org/index.html)
+-  [Intel FPGA Academic Program](https://fpgacademy.org/index.html)
 -  [DE1-SoC FPGA Lectures](https://www.youtube.com/playlist?list=PLDqMkB5cbBA4OW0fDTu1FY6aw4uBWOpBa)
 -  [DE1-SoC: ARM HPS Linux](https://people.ece.cornell.edu/land/courses/ece5760/DE1_SOC/HPS_peripherials/linux_index.html)
 -  [DE1-SoC Docs](https://people.ece.cornell.edu/land/courses/ece5760/DE1_SOC/index.html)
