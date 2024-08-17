@@ -1,0 +1,21 @@
+-- begin_signature
+-- sseg_rom
+-- end_signature
+WIDTH=7;
+DEPTH=16;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=BIN;
+
+CONTENT BEGIN
+	9 :	0001000;
+	8 :	1000010;
+	7 :	0001100;
+	6 :	0001110;
+	5 :	1111111;
+	4 :	1000111;
+	3 :	0000110;
+	2 :	0000111;
+	1 :	0101011;
+	0 :	1111001;
+END;
