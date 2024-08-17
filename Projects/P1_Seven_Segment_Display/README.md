@@ -6,9 +6,11 @@ This project is designed to rotate and display characters on six 7-segment displ
 
 ## Project Structure
 
-- **`sseg_top.vhd`**: The top-level VHDL file that orchestrates the overall operation. It includes the clock management, shift register logic, and instantiation of the ROM module for character mapping.
+- **`src/`**: This directory contains the VHDL source files for the project.
+  - **`sseg_top.vhd`**: The top-level VHDL file that orchestrates the overall operation. It includes the clock management, shift register logic, and instantiation of the ROM module for character mapping.
+  - **`sseg_rom.vhd`**: A ROM module that stores the 7-segment display patterns for the characters. The ROM outputs the corresponding segment pattern based on the input address.
   
-- **`sseg_rom.vhd`**: A ROM module that stores the 7-segment display patterns for the characters. The ROM outputs the corresponding segment pattern based on the input address.
+- **Pin Assignment File (`DE1_SOC.qsf`)**: This file contains the pin assignments for the DE1-SoC board, ensuring that the signals are correctly mapped to the FPGA's physical pins. It is included in the project directory.
 
 ## Functionality
 
@@ -27,14 +29,12 @@ This project is designed to rotate and display characters on six 7-segment displ
 ## How to Use
 
 1. **Compilation**: Open the project in Quartus, and compile the design.
-
-2. **Programming the FPGA**: Load the generated `.sof` file onto the DE1-SoC board.
-
-3. **Operation**:
+2. **Pin Assignments**: Set up the pin assignments by importing the included `DE1_SOC.qsf` file. In Quartus Prime, navigate to **Assignments** > **Import Assignments**, then select the `DE1_SOC.qsf` file located in the project directory.
+3. **Programming the FPGA**: Load the generated `.sof` file onto the DE1-SoC board.
+4. **Operation**:
    - The display will start by showing "INTEL FPGA" on the six 7-segment displays.
    - Every 0.5 seconds, the displayed text will rotate to the left, creating a moving text effect.
-
-4. **Reset**: Pressing `KEY(0)` will reset the display to the initial state and restart the rotation sequence.
+5. **Reset**: Pressing `KEY(0)` will reset the display to the initial state and restart the rotation sequence.
 
 ## Customization
 
