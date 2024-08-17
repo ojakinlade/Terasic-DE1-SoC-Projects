@@ -1,4 +1,4 @@
-# Seven-Segment Display Rotating Text Project
+# Seven-Segment Display Project
 
 ## Overview
 
