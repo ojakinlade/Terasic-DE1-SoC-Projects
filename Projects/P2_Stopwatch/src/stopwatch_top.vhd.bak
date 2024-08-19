@@ -1,0 +1,64 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+library work;
+
+entity stopwatch_top is
+	port(CLOCK_50: in std_logic;
+		  KEY : in std_logic_vector(3 downto 0);
+		  HEX0: out std_logic_vector(6 downto 0);
+		  HEX1: out std_logic_vector(6 downto 0);
+		  HEX2: out std_logic_vector(6 downto 0);
+		  HEX3: out std_logic_vector(6 downto 0);
+		  HEX4: out std_logic_vector(6 downto 0);
+		  HEX5: out std_logic_vector(6 downto 0));
+end stopwatch_top;
+
+architecture stopwatch_top_rtl of stopwatch_top is
+	type digit_type is array(0 to 5) of std_logic_vector(3 downto 0);
+   signal digit: digit_type;
+begin
+	-- counter for 'units' digit
+	counter_1: entity work.seg_counter(seg_counter_rtl)
+   generic map(PLACE_VALUE => 1)
+   port map(rst_n => KEY(0), clk => CLOCK_50, en => '1', seg_out => digit(0));
+	
+	ROM_1: entity work.seg_ROM(seg_rom_rtl)
+	port map(addr => digit(0), data_out => HEX0);
+	
+	counter_2: entity work.seg_counter(seg_counter_rtl)
+   generic map(PLACE_VALUE => 1)
+   port map(rst_n => KEY(0), clk => CLOCK_50, en => '1', seg_out => digit(1));
+	
+	ROM_2: entity work.seg_ROM(seg_rom_rtl)
+	port map(addr => digit(1), data_out => HEX1);
+	
+	counter_3: entity work.seg_counter(seg_counter_rtl)
+   generic map(PLACE_VALUE => 1)
+   port map(rst_n => KEY(0), clk => CLOCK_50, en => '1', seg_out => digit(2));
+	
+	ROM_3: entity work.seg_ROM(seg_rom_rtl)
+	port map(addr => digit(2), data_out => HEX2);
+	
+	counter_4: entity work.seg_counter(seg_counter_rtl)
+   generic map(PLACE_VALUE => 1)
+   port map(rst_n => KEY(0), clk => CLOCK_50, en => '1', seg_out => digit(3));
+	
+	ROM_4: entity work.seg_ROM(seg_rom_rtl)
+	port map(addr => digit(3), data_out => HEX3);
+	
+	counter_5: entity work.seg_counter(seg_counter_rtl)
+   generic map(PLACE_VALUE => 1)
+   port map(rst_n => KEY(0), clk => CLOCK_50, en => '1', seg_out => digit(4));
+	
+	ROM_5: entity work.seg_ROM(seg_rom_rtl)
+	port map(addr => digit(4), data_out => HEX4);
+	
+	counter_6: entity work.seg_counter(seg_counter_rtl)
+   generic map(PLACE_VALUE => 1)
+   port map(rst_n => KEY(0), clk => CLOCK_50, en => '1', seg_out => digit(5));
+	
+	ROM_6: entity work.seg_ROM(seg_rom_rtl)
+	port map(addr => digit(5), data_out => HEX5);
+	
+end stopwatch_top_rtl;

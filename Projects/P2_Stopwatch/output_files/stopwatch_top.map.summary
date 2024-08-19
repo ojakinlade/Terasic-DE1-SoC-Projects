@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Mon Aug 19 18:54:04 2024
+Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+Revision Name : stopwatch_top
+Top-level Entity Name : stopwatch_top
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 126
+Total pins : 33
+Total virtual pins : 0
+Total block memory bits : 0
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 4
+Total DLLs : 0
