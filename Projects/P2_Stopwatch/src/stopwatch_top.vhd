@@ -22,7 +22,7 @@ begin
    begin
       if(KEY(0) = '0') then
          en <= '1';
-			prevPressed <= '0';
+         prevPressed <= '0';
       elsif rising_edge(CLOCK_50) then
          if KEY(1) = '0' and prevPressed = '0' then
             en <= '0';

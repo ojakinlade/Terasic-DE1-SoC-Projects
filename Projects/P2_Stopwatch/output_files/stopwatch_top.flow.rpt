@@ -1,5 +1,5 @@
 Flow report for stopwatch_top
-Mon Aug 19 21:57:42 2024
+Mon Aug 19 22:20:53 2024
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Mon Aug 19 21:57:34 2024          ;
+; Flow Status                     ; Successful - Mon Aug 19 22:20:45 2024          ;
 ; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                   ; stopwatch_top                                  ;
 ; Top-level Entity Name           ; stopwatch_top                                  ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/19/2024 21:56:16 ;
+; Start date & time ; 08/19/2024 22:19:44 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; stopwatch_top       ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 18026798746630.172410097511124         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 18026798746630.172410238408284         ; --            ; --          ; --         ;
 ; MISC_FILE                           ; IP/PLL/PLL.cmp                         ; --            ; --          ; --         ;
 ; MISC_FILE                           ; IP/PLL/PLL_sim/PLL.vho                 ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -96,11 +96,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4897 MB             ; 00:00:20                           ;
-; Fitter               ; 00:00:48     ; 1.0                     ; 6575 MB             ; 00:01:03                           ;
-; Assembler            ; 00:00:15     ; 1.0                     ; 4876 MB             ; 00:00:10                           ;
-; Timing Analyzer      ; 00:00:07     ; 1.1                     ; 5186 MB             ; 00:00:07                           ;
-; Total                ; 00:01:22     ; --                      ; --                  ; 00:01:40                           ;
+; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4897 MB             ; 00:00:21                           ;
+; Fitter               ; 00:00:40     ; 1.0                     ; 6567 MB             ; 00:01:03                           ;
+; Assembler            ; 00:00:07     ; 1.0                     ; 4876 MB             ; 00:00:07                           ;
+; Timing Analyzer      ; 00:00:07     ; 1.1                     ; 5174 MB             ; 00:00:07                           ;
+; Total                ; 00:01:04     ; --                      ; --                  ; 00:01:38                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

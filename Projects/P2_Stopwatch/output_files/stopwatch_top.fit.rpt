@@ -1,5 +1,5 @@
 Fitter report for stopwatch_top
-Mon Aug 19 21:57:17 2024
+Mon Aug 19 22:20:36 2024
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -66,7 +66,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +---------------------------------+------------------------------------------------+
-; Fitter Status                   ; Successful - Mon Aug 19 21:57:17 2024          ;
+; Fitter Status                   ; Successful - Mon Aug 19 22:20:36 2024          ;
 ; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                   ; stopwatch_top                                  ;
 ; Top-level Entity Name           ; stopwatch_top                                  ;
@@ -161,7 +161,7 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.5%      ;
 ;     Processor 3            ;   0.5%      ;
-;     Processor 4            ;   0.4%      ;
+;     Processor 4            ;   0.5%      ;
 +----------------------------+-------------+
 
 
@@ -2461,7 +2461,7 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "VGA_R[7]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_SYNC_N" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_VS" is assigned to location or region, but does not exist in design
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:15
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:14
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
@@ -2475,7 +2475,7 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.55 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.51 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -2484,10 +2484,10 @@ Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/output_files/stopwatch_top.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 145 warnings
-    Info: Peak virtual memory: 6575 megabytes
-    Info: Processing ended: Mon Aug 19 21:57:17 2024
-    Info: Elapsed time: 00:00:48
-    Info: Total CPU time (on all processors): 00:01:04
+    Info: Peak virtual memory: 6567 megabytes
+    Info: Processing ended: Mon Aug 19 22:20:37 2024
+    Info: Elapsed time: 00:00:41
+    Info: Total CPU time (on all processors): 00:01:03
 
 
 +----------------------------+
