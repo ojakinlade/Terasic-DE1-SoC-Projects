@@ -12,10 +12,9 @@ The Terasic DE1-SoC is a versatile development and education platform integratin
 
 *Figure 2: Block diagram of the Terasic DE1-SoC board.*
 
-## Structure of This Repository
+## Structure of this Repository
 - **Project Folders**: Each project is organized into separate folders, containing project-specific files, documentation, and resources.
-- **Documentation**: Detailed documentation including design rationale, circuit diagrams, and user guides can be found in the `docs/` folder.
-- **Resources**: Additional resources such as datasheets, software tools, and reference materials are stored in the `resources/` folder.
+- **Documentation**: Resources such as datasheets, software tools, user guides and reference materials are stored in the `docs/` folder.
 
 ## Getting Started
 If you're new to the Terasic DE1-SoC or FPGA development in general, start by reading the README.md file in each project folder. It provides setup instructions, usage guidelines, and insights into the project goals and outcomes.
