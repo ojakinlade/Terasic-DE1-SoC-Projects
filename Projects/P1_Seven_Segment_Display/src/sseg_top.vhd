@@ -15,7 +15,7 @@ entity sseg_top is
 end sseg_top;
 
 architecture sseg_top_rtl of sseg_top is
-   signal shift_reg: std_logic_vector(39 downto 0) := "0000000100100011010001010110011110001000";
+   signal shift_reg: std_logic_vector(39 downto 0);
    signal clk_out: std_logic;
    Signal locked: std_logic;
    signal ticks: unsigned(23 downto 0);

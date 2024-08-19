@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Sat Aug 17 12:20:37 2024
+Analysis & Synthesis Status : Successful - Mon Aug 19 22:10:55 2024
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : sseg_top
 Top-level Entity Name : sseg_top
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 64
+Total registers : 56
 Total pins : 47
 Total virtual pins : 0
 Total block memory bits : 0

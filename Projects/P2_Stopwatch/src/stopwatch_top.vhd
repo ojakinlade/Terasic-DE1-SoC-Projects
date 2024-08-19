@@ -15,13 +15,14 @@ end stopwatch_top;
 architecture stopwatch_top_rtl of stopwatch_top is
    type digit_type is array(0 to 3) of std_logic_vector(3 downto 0);
    signal digit: digit_type;
-   signal en: std_logic := '1';
-   signal prevPressed: std_logic := '0';
+   signal en: std_logic;
+   signal prevPressed: std_logic;
 begin
    BUTTON_PRESS: process(CLOCK_50, KEY(0))
    begin
       if(KEY(0) = '0') then
          en <= '1';
+			prevPressed <= '0';
       elsif rising_edge(CLOCK_50) then
          if KEY(1) = '0' and prevPressed = '0' then
             en <= '0';
