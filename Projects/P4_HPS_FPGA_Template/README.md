@@ -13,8 +13,8 @@ This guide provides step-by-step instructions to set up the `HPS_FPGA_Template` 
   4. [Integrate Generated HDL with Top File](#4-integrate-generated-hdl-with-top-file)
   5. [Generate Header File for HPS](#5-generate-header-file-for-hps)
   6. [Write and Compile C Code](#6-write-and-compile-c-code)
-- [Useful Resources](#Useful-Resources)
 - [Conclusion](#conclusion)
+- [Useful Resources](#Useful-Resources)
 - [TO-DO](#to-do)
 
 ## Introduction
