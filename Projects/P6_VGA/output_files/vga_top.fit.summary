@@ -1,4 +1,4 @@
-Fitter Status : Successful - Wed Sep 25 14:55:40 2024
+Fitter Status : Successful - Thu Sep 26 22:58:37 2024
 Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 Revision Name : vga_top
 Top-level Entity Name : vga_top
@@ -6,8 +6,8 @@ Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
 Logic utilization (in ALMs) : 32 / 32,070 ( < 1 % )
-Total registers : 55
-Total pins : 55 / 457 ( 12 % )
+Total registers : 63
+Total pins : 33 / 457 ( 7 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 4,065,280 ( 0 % )
 Total RAM Blocks : 0 / 397 ( 0 % )

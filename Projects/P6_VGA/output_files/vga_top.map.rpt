@@ -1,5 +1,5 @@
 Analysis & Synthesis report for vga_top
-Wed Sep 25 14:54:15 2024
+Thu Sep 26 22:57:34 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -13,14 +13,11 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Parameter Settings for User Entity Instance: Top-level Entity: |vga_top
- 11. Parameter Settings for User Entity Instance: frame_counter:counter_unit
- 12. Port Connectivity Checks: "frame_counter:counter_unit"
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |vga_top
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -47,14 +44,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Sep 25 14:54:15 2024          ;
+; Analysis & Synthesis Status     ; Successful - Thu Sep 26 22:57:34 2024          ;
 ; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; vga_top                                        ;
 ; Top-level Entity Name           ; vga_top                                        ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 37                                             ;
-; Total pins                      ; 55                                             ;
+; Total registers                 ; 47                                             ;
+; Total pins                      ; 33                                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0                                              ;
 ; Total DSP Blocks                ; 0                                              ;
@@ -171,15 +168,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                     ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                              ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
-; src/vga_top.vhd                  ; yes             ; User VHDL File  ; /home/ojakinlade/Documents/terasic-de1-soc-projects/Projects/P7_VGA/src/vga_top.vhd       ;         ;
-; src/frame_counter.vhd            ; yes             ; User VHDL File  ; /home/ojakinlade/Documents/terasic-de1-soc-projects/Projects/P7_VGA/src/frame_counter.vhd ;         ;
-; src/pixel_gen.vhd                ; yes             ; User VHDL File  ; /home/ojakinlade/Documents/terasic-de1-soc-projects/Projects/P7_VGA/src/pixel_gen.vhd     ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                 ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                          ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+---------+
+; src/vga_top.vhd                  ; yes             ; User VHDL File  ; /home/ojakinlade/Documents/terasic-de1-soc-projects/Projects/P7_VGA/src/vga_top.vhd   ;         ;
+; src/pixel_gen.vhd                ; yes             ; User VHDL File  ; /home/ojakinlade/Documents/terasic-de1-soc-projects/Projects/P7_VGA/src/pixel_gen.vhd ;         ;
+; src/vga_sync.vhd                 ; yes             ; User VHDL File  ; /home/ojakinlade/Documents/terasic-de1-soc-projects/Projects/P7_VGA/src/vga_sync.vhd  ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -189,58 +186,36 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Estimate of Logic utilization (ALMs needed) ; 33             ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 55             ;
+; Combinational ALUT usage for logic          ; 51             ;
 ;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 10             ;
-;     -- 5 input functions                    ; 5              ;
-;     -- 4 input functions                    ; 8              ;
-;     -- <=3 input functions                  ; 32             ;
+;     -- 6 input functions                    ; 11             ;
+;     -- 5 input functions                    ; 7              ;
+;     -- 4 input functions                    ; 7              ;
+;     -- <=3 input functions                  ; 26             ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 37             ;
+; Dedicated logic registers                   ; 47             ;
 ;                                             ;                ;
-; I/O pins                                    ; 55             ;
+; I/O pins                                    ; 33             ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 37             ;
-; Total fan-out                               ; 419            ;
-; Average fan-out                             ; 2.07           ;
+; Maximum fan-out                             ; 47             ;
+; Total fan-out                               ; 446            ;
+; Average fan-out                             ; 2.72           ;
 +---------------------------------------------+----------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                           ;
-+---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------+---------------+--------------+
-; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                 ; Entity Name   ; Library Name ;
-+---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------+---------------+--------------+
-; |vga_top                        ; 55 (15)             ; 37 (15)                   ; 0                 ; 0          ; 55   ; 0            ; |vga_top                            ; vga_top       ; work         ;
-;    |frame_counter:counter_unit| ; 35 (35)             ; 22 (22)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_top|frame_counter:counter_unit ; frame_counter ; work         ;
-;    |pixel_gen:pixel_generate|   ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_top|pixel_gen:pixel_generate   ; pixel_gen     ; work         ;
-+---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------+---------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                     ;
++-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------+-------------+--------------+
+; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name               ; Entity Name ; Library Name ;
++-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------+-------------+--------------+
+; |vga_top                      ; 51 (0)              ; 47 (24)                   ; 0                 ; 0          ; 33   ; 0            ; |vga_top                          ; vga_top     ; work         ;
+;    |pixel_gen:pixel_generate| ; 19 (19)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_top|pixel_gen:pixel_generate ; pixel_gen   ; work         ;
+;    |vga_sync:vga_sync_unit|   ; 32 (32)             ; 23 (23)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_top|vga_sync:vga_sync_unit   ; vga_sync    ; work         ;
++-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; VGA_B[7]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; VGA_B[6]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; VGA_B[5]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; VGA_B[4]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; q_reg[1]                               ; Stuck at GND due to stuck port data_in ;
-; VGA_G[4]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; VGA_G[5]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; VGA_G[6]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; VGA_G[7]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; VGA_R[4]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; VGA_R[5]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; VGA_R[6]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; VGA_R[7]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 13 ;                                        ;
-+----------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -248,12 +223,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 37    ;
-; Number of registers using Synchronous Clear  ; 22    ;
+; Total registers                              ; 47    ;
+; Number of registers using Synchronous Clear  ; 20    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 23    ;
+; Number of registers using Asynchronous Clear ; 47    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 22    ;
+; Number of registers using Clock Enable       ; 44    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -263,29 +238,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+-------+------------------------------------------------+
 ; Parameter Name ; Value ; Type                                           ;
 +----------------+-------+------------------------------------------------+
-; COLOR_DEPTH    ; 12    ; Signed Integer                                 ;
+; COLOR_DEPTH    ; 24    ; Signed Integer                                 ;
 +----------------+-------+------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: frame_counter:counter_unit ;
-+----------------+-------+------------------------------------------------+
-; Parameter Name ; Value ; Type                                           ;
-+----------------+-------+------------------------------------------------+
-; hmax           ; 800   ; Signed Integer                                 ;
-; vmax           ; 525   ; Signed Integer                                 ;
-+----------------+-------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------+
-; Port Connectivity Checks: "frame_counter:counter_unit" ;
-+----------+-------+----------+--------------------------+
-; Port     ; Type  ; Severity ; Details                  ;
-+----------+-------+----------+--------------------------+
-; sync_clr ; Input ; Info     ; Stuck at GND             ;
-+----------+-------+----------+--------------------------+
 
 
 +-----------------------------------------------------+
@@ -293,25 +248,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 37                          ;
-;     CLR               ; 1                           ;
-;     ENA CLR SCLR      ; 22                          ;
-;     plain             ; 14                          ;
-; arriav_lcell_comb     ; 56                          ;
-;     arith             ; 22                          ;
-;         1 data inputs ; 22                          ;
-;     normal            ; 34                          ;
-;         0 data inputs ; 1                           ;
+; arriav_ff             ; 47                          ;
+;     CLR               ; 3                           ;
+;     ENA CLR           ; 24                          ;
+;     ENA CLR SCLR      ; 20                          ;
+; arriav_lcell_comb     ; 51                          ;
+;     arith             ; 20                          ;
+;         1 data inputs ; 20                          ;
+;     normal            ; 31                          ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 2                           ;
-;         3 data inputs ; 7                           ;
-;         4 data inputs ; 8                           ;
-;         5 data inputs ; 5                           ;
-;         6 data inputs ; 10                          ;
-; boundary_port         ; 55                          ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 7                           ;
+;         5 data inputs ; 7                           ;
+;         6 data inputs ; 11                          ;
+; boundary_port         ; 33                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.85                        ;
+; Average LUT depth     ; 1.71                        ;
 +-----------------------+-----------------------------+
 
 
@@ -320,7 +274,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -330,12 +284,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Wed Sep 25 14:54:00 2024
+    Info: Processing started: Thu Sep 26 22:57:23 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off vga -c vga_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file src/vga_top.vhd
-    Info (12022): Found design unit 1: vga_top-vga_top_rtl File: /home/ojakinlade/Documents/terasic-de1-soc-projects/Projects/P7_VGA/src/vga_top.vhd Line: 20
+    Info (12022): Found design unit 1: vga_top-vga_top_rtl File: /home/ojakinlade/Documents/terasic-de1-soc-projects/Projects/P7_VGA/src/vga_top.vhd Line: 18
     Info (12023): Found entity 1: vga_top File: /home/ojakinlade/Documents/terasic-de1-soc-projects/Projects/P7_VGA/src/vga_top.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file src/frame_counter.vhd
     Info (12022): Found design unit 1: frame_counter-frame_counter_rtl File: /home/ojakinlade/Documents/terasic-de1-soc-projects/Projects/P7_VGA/src/frame_counter.vhd Line: 18
@@ -346,22 +300,12 @@ Info (12021): Found 2 design units, including 1 entities, in source file src/pix
 Info (12021): Found 2 design units, including 1 entities, in source file simulation/questa/vga_top_tb.vhd
     Info (12022): Found design unit 1: vga_top_tb-vga_top_behav File: /home/ojakinlade/Documents/terasic-de1-soc-projects/Projects/P7_VGA/simulation/questa/vga_top_tb.vhd Line: 9
     Info (12023): Found entity 1: vga_top_tb File: /home/ojakinlade/Documents/terasic-de1-soc-projects/Projects/P7_VGA/simulation/questa/vga_top_tb.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file src/vga_sync.vhd
+    Info (12022): Found design unit 1: vga_sync-vga_sync_rtl File: /home/ojakinlade/Documents/terasic-de1-soc-projects/Projects/P7_VGA/src/vga_sync.vhd Line: 16
+    Info (12023): Found entity 1: vga_sync File: /home/ojakinlade/Documents/terasic-de1-soc-projects/Projects/P7_VGA/src/vga_sync.vhd Line: 5
 Info (12127): Elaborating entity "vga_top" for the top level hierarchy
-Info (12129): Elaborating entity "frame_counter" using architecture "A:frame_counter_rtl" for hierarchy "frame_counter:counter_unit" File: /home/ojakinlade/Documents/terasic-de1-soc-projects/Projects/P7_VGA/src/vga_top.vhd Line: 41
-Info (12129): Elaborating entity "pixel_gen" using architecture "A:pixel_gen_rtl" for hierarchy "pixel_gen:pixel_generate" File: /home/ojakinlade/Documents/terasic-de1-soc-projects/Projects/P7_VGA/src/vga_top.vhd Line: 47
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "VGA_R[4]" is stuck at GND File: /home/ojakinlade/Documents/terasic-de1-soc-projects/Projects/P7_VGA/src/vga_top.vhd Line: 74
-    Warning (13410): Pin "VGA_R[5]" is stuck at GND File: /home/ojakinlade/Documents/terasic-de1-soc-projects/Projects/P7_VGA/src/vga_top.vhd Line: 74
-    Warning (13410): Pin "VGA_R[6]" is stuck at GND File: /home/ojakinlade/Documents/terasic-de1-soc-projects/Projects/P7_VGA/src/vga_top.vhd Line: 74
-    Warning (13410): Pin "VGA_R[7]" is stuck at GND File: /home/ojakinlade/Documents/terasic-de1-soc-projects/Projects/P7_VGA/src/vga_top.vhd Line: 74
-    Warning (13410): Pin "VGA_G[4]" is stuck at GND File: /home/ojakinlade/Documents/terasic-de1-soc-projects/Projects/P7_VGA/src/vga_top.vhd Line: 74
-    Warning (13410): Pin "VGA_G[5]" is stuck at GND File: /home/ojakinlade/Documents/terasic-de1-soc-projects/Projects/P7_VGA/src/vga_top.vhd Line: 74
-    Warning (13410): Pin "VGA_G[6]" is stuck at GND File: /home/ojakinlade/Documents/terasic-de1-soc-projects/Projects/P7_VGA/src/vga_top.vhd Line: 74
-    Warning (13410): Pin "VGA_G[7]" is stuck at GND File: /home/ojakinlade/Documents/terasic-de1-soc-projects/Projects/P7_VGA/src/vga_top.vhd Line: 74
-    Warning (13410): Pin "VGA_B[4]" is stuck at GND File: /home/ojakinlade/Documents/terasic-de1-soc-projects/Projects/P7_VGA/src/vga_top.vhd Line: 74
-    Warning (13410): Pin "VGA_B[5]" is stuck at GND File: /home/ojakinlade/Documents/terasic-de1-soc-projects/Projects/P7_VGA/src/vga_top.vhd Line: 74
-    Warning (13410): Pin "VGA_B[6]" is stuck at GND File: /home/ojakinlade/Documents/terasic-de1-soc-projects/Projects/P7_VGA/src/vga_top.vhd Line: 74
-    Warning (13410): Pin "VGA_B[7]" is stuck at GND File: /home/ojakinlade/Documents/terasic-de1-soc-projects/Projects/P7_VGA/src/vga_top.vhd Line: 74
+Info (12129): Elaborating entity "vga_sync" using architecture "A:vga_sync_rtl" for hierarchy "vga_sync:vga_sync_unit" File: /home/ojakinlade/Documents/terasic-de1-soc-projects/Projects/P7_VGA/src/vga_top.vhd Line: 28
+Info (12129): Elaborating entity "pixel_gen" using architecture "A:pixel_gen_rtl" for hierarchy "pixel_gen:pixel_generate" File: /home/ojakinlade/Documents/terasic-de1-soc-projects/Projects/P7_VGA/src/vga_top.vhd Line: 33
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -369,14 +313,14 @@ Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]" File: /home/ojakinlade/Documents/terasic-de1-soc-projects/Projects/P7_VGA/src/vga_top.vhd Line: 8
     Warning (15610): No output dependent on input pin "KEY[2]" File: /home/ojakinlade/Documents/terasic-de1-soc-projects/Projects/P7_VGA/src/vga_top.vhd Line: 8
     Warning (15610): No output dependent on input pin "KEY[3]" File: /home/ojakinlade/Documents/terasic-de1-soc-projects/Projects/P7_VGA/src/vga_top.vhd Line: 8
-Info (21057): Implemented 122 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 108 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
-    Info (21059): Implemented 50 output pins
-    Info (21061): Implemented 67 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 475 megabytes
-    Info: Processing ended: Wed Sep 25 14:54:15 2024
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:28
+    Info (21059): Implemented 28 output pins
+    Info (21061): Implemented 75 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 482 megabytes
+    Info: Processing ended: Thu Sep 26 22:57:34 2024
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:23
 
 

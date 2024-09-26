@@ -12,11 +12,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "frame_start",
+					"name" : "VGA_CLK",
 					"strict" : false
 				},
 				{
-					"name" : "frame_end",
+					"name" : "video_on",
 					"strict" : false
 				},
 				{
@@ -36,6 +36,22 @@
 					"strict" : false
 				},
 				{
+					"name" : "VGA_R[4]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[5]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[6]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[7]",
+					"strict" : false
+				},
+				{
 					"name" : "VGA_G[0]",
 					"strict" : false
 				},
@@ -49,6 +65,22 @@
 				},
 				{
 					"name" : "VGA_G[3]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_G[4]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_G[5]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_G[6]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_G[7]",
 					"strict" : false
 				},
 				{
@@ -68,91 +100,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "hcount[0]",
+					"name" : "VGA_B[4]",
 					"strict" : false
 				},
 				{
-					"name" : "hcount[1]",
+					"name" : "VGA_B[5]",
 					"strict" : false
 				},
 				{
-					"name" : "hcount[2]",
+					"name" : "VGA_B[6]",
 					"strict" : false
 				},
 				{
-					"name" : "hcount[3]",
-					"strict" : false
-				},
-				{
-					"name" : "hcount[4]",
-					"strict" : false
-				},
-				{
-					"name" : "hcount[5]",
-					"strict" : false
-				},
-				{
-					"name" : "hcount[6]",
-					"strict" : false
-				},
-				{
-					"name" : "hcount[7]",
-					"strict" : false
-				},
-				{
-					"name" : "hcount[8]",
-					"strict" : false
-				},
-				{
-					"name" : "hcount[9]",
-					"strict" : false
-				},
-				{
-					"name" : "hcount[10]",
-					"strict" : false
-				},
-				{
-					"name" : "vcount[0]",
-					"strict" : false
-				},
-				{
-					"name" : "vcount[1]",
-					"strict" : false
-				},
-				{
-					"name" : "vcount[2]",
-					"strict" : false
-				},
-				{
-					"name" : "vcount[3]",
-					"strict" : false
-				},
-				{
-					"name" : "vcount[4]",
-					"strict" : false
-				},
-				{
-					"name" : "vcount[5]",
-					"strict" : false
-				},
-				{
-					"name" : "vcount[6]",
-					"strict" : false
-				},
-				{
-					"name" : "vcount[7]",
-					"strict" : false
-				},
-				{
-					"name" : "vcount[8]",
-					"strict" : false
-				},
-				{
-					"name" : "vcount[9]",
-					"strict" : false
-				},
-				{
-					"name" : "vcount[10]",
+					"name" : "VGA_B[7]",
 					"strict" : false
 				},
 				{
