@@ -10,9 +10,9 @@ entity vga_top is
         VGA_VS     : out std_logic;
         frame_start: out std_logic;
         frame_end  : out std_logic;
-        VGA_R    	 : out std_logic_vector(7 downto 0);
-		  VGA_G      : out std_logic_vector(7 downto 0);
-		  VGA_B      : out std_logic_vector(7 downto 0);
+        VGA_R  	   : out std_logic_vector(7 downto 0);
+	VGA_G      : out std_logic_vector(7 downto 0);
+	VGA_B      : out std_logic_vector(7 downto 0);
         hcount     : out std_logic_vector(10 downto 0);
         vcount     : out std_logic_vector(10 downto 0));
 end vga_top;
@@ -76,12 +76,12 @@ begin
          VGA_HS <= hsync_i;
          if video_on_i = '1' then
             VGA_R <= "0000" & vga_in(11 downto 8);
-				VGA_G <= "0000" & vga_in(7 downto 4);
-				VGA_B <= "0000" & vga_in(3 downto 0);
+	    VGA_G <= "0000" & vga_in(7 downto 4);
+	    VGA_B <= "0000" & vga_in(3 downto 0);
          else	-- Black when display off
             VGA_R <= (others => '0');
-				VGA_G <= (others => '0');
-				VGA_B <= (others => '0');  
+	    VGA_G <= (others => '0');
+	    VGA_B <= (others => '0');  
          end if;   
       end if;
    end process;
