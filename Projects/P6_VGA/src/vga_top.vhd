@@ -8,7 +8,6 @@ entity vga_top is
         KEY        : in std_logic_vector(3 downto 0);
         VGA_HS     : out std_logic;
         VGA_VS     : out std_logic;
-<<<<<<< Updated upstream
         frame_start: out std_logic;
         frame_end  : out std_logic;
         VGA_R  	   : out std_logic_vector(7 downto 0);
@@ -16,13 +15,11 @@ entity vga_top is
 	VGA_B      : out std_logic_vector(7 downto 0);
         hcount     : out std_logic_vector(10 downto 0);
         vcount     : out std_logic_vector(10 downto 0));
-=======
         VGA_CLK    : out std_logic;
         video_on   : out std_logic;
         VGA_R      : out std_logic_vector(7 downto 0);
         VGA_G      : out std_logic_vector(7 downto 0);
         VGA_B      : out std_logic_vector(7 downto 0));
->>>>>>> Stashed changes
 end vga_top;
 
 architecture vga_top_rtl of vga_top is
@@ -58,7 +55,6 @@ begin
       if KEY(0) = '0' then
          rgb_reg <= (others => '0');
       elsif rising_edge(CLOCK_50) then
-<<<<<<< Updated upstream
          q_reg <= (q_reg + 1) mod 2;
       end if;
    end process;
@@ -90,9 +86,7 @@ begin
 	    VGA_G <= (others => '0');
 	    VGA_B <= (others => '0');  
          end if;   
-=======
          rgb_reg <= rgb_next;
->>>>>>> Stashed changes
       end if;
    end process;
 end vga_top_rtl;
