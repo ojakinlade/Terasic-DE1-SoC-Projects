@@ -19,7 +19,7 @@ This project implements a VGA controller on the Terasic DE1-SoC board. It genera
 ## Steps
 1. Clone the project:
 ```
-git clone https://github.com/ojakinlade/...
+git clone https://github.com/ojakinlade/Terasic-DE1-SoC-Projects/tree/main/Projects/P6_VGA
 ```
 2. Open the project in Quartus Prime and compile
 3. Import Pin assignments from the DE1_SOC.qsf provided in the project directory. 
