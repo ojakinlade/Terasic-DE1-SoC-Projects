@@ -1,0 +1,61 @@
+[N
+8
+3
+17 frame_counter_rtl
+2
+13 frame_counter
+8
+11 COLOR_DEPTH
+7
+11 vga_top_rtl
+4
+4 HMAX
+6
+7 vga_top
+5
+4 VMAX
+1
+90 /home/ojakinlade/Documents/terasic-de1-soc-projects/Projects/P7_VGA/simulation/questa/work
+]
+[G
+1
+6
+7
+1
+8
+1
+0
+12
+0
+0 0
+0
+0
+]
+[G
+1
+2
+3
+1
+4
+0
+0
+800
+0
+0 0
+0
+0
+]
+[G
+1
+2
+3
+1
+5
+0
+0
+525
+0
+0 0
+0
+0
+]
