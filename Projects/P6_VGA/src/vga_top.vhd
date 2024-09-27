@@ -10,19 +10,18 @@ entity vga_top is
         VGA_VS     : out std_logic;
         VGA_CLK    : out std_logic;
         video_on   : out std_logic;
-        VGA_R      : out std_logic_vector(7 downto 0);
-        VGA_G      : out std_logic_vector(7 downto 0);
-        VGA_B      : out std_logic_vector(7 downto 0));
+        VGA_R      : out std_logic_vector((COLOR_DEPTH / 3) - 1 downto 0);
+        VGA_G      : out std_logic_vector((COLOR_DEPTH / 3) - 1 downto 0);
+        VGA_B      : out std_logic_vector((COLOR_DEPTH / 3) - 1 downto 0));
 end vga_top;
 
 architecture vga_top_rtl of vga_top is
    signal pixel_x: std_logic_vector(9 downto 0); 
    signal pixel_y: std_logic_vector(9 downto 0);
-   signal q_reg   : std_logic;
    signal pixel_tick: std_logic;
-   signal rgb_out: std_logic_vector(23 downto 0);
-   signal rgb_reg: std_logic_vector(23 downto 0); 
-   signal rgb_next: std_logic_vector(23 downto 0);
+   signal rgb_out: std_logic_vector(COLOR_DEPTH - 1 downto 0);
+   signal rgb_reg: std_logic_vector(COLOR_DEPTH - 1 downto 0); 
+   signal rgb_next: std_logic_vector(COLOR_DEPTH - 1 downto 0);
 begin
     -- Instantiate VGA sync
    vga_sync_unit: entity work.vga_sync(vga_sync_rtl)

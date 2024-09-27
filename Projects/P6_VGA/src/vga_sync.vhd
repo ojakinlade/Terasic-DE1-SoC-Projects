@@ -39,6 +39,7 @@ architecture vga_sync_rtl of vga_sync is
    signal v_sync_reg: std_logic; 
    signal v_sync_next: std_logic; 
    -- status signal
+	--signal frame_end_reg: std_logic;
    signal h_end: std_logic; 
    signal v_end: std_logic; 
    signal pixel_tick: std_logic; 
@@ -104,7 +105,7 @@ begin
     
    v_sync_next <= '0' when (v_count_reg >= (VD + VF))        --490
                      and (v_count_reg <= (VD + VF + VR - 1)) --491
-                     else    '1';   
+                     else '1';   
      
    video_on <= '1' when (h_count_reg < HD) and (v_count_reg < VD) 
                    else '0';

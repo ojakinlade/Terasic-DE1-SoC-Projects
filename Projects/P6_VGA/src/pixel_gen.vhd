@@ -5,7 +5,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity pixel_gen is
    port(pixel_x: in std_logic_vector(9 downto 0);
         pixel_y: in std_logic_vector(9 downto 0);
-        rgb_out    : out std_logic_vector(23 downto 0));
+        rgb_out: out std_logic_vector(23 downto 0));
 end pixel_gen;
 
 architecture pixel_gen_rtl of pixel_gen is
