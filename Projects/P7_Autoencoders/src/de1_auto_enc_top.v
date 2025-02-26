@@ -1,0 +1,23 @@
+module de1_auto_enc_top (
+  input CLOCK_50,         // 50MHz clock
+  input [9:0] SW,         // Switches (using SW[3:0])
+  output [9:0] LEDR       // LEDs (using LEDR[3:0])
+);
+
+  wire [3:0] input_data;  // 4-bit input from switches
+  wire [3:0] output_data; // 4-bit reconstructed output
+  
+  assign input_data = SW[3:0];  // Map switches to input
+
+  // Instantiate the autoencoder
+  auto_enc_core auto_enc_inst (
+    .clk(CLOCK_50),
+    .input_vec(input_data),
+    .output_vec(output_data)
+  );
+
+  // Assign output to LEDs
+  assign LEDR[3:0] = output_data;
+  assign LEDR[9:4] = 6'b0;  // Turn off unused LEDs
+  
+endmodule

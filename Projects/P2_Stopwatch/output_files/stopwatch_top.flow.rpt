@@ -1,6 +1,6 @@
 Flow report for stopwatch_top
-Mon Aug 19 22:20:53 2024
-Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+Wed Feb 26 20:58:31 2025
+Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
 ---------------------
@@ -21,7 +21,7 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2023  Intel Corporation. All rights reserved.
+Copyright (C) 2024  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Mon Aug 19 22:20:45 2024          ;
-; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
+; Flow Status                     ; Successful - Wed Feb 26 20:58:24 2025          ;
+; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; stopwatch_top                                  ;
 ; Top-level Entity Name           ; stopwatch_top                                  ;
 ; Family                          ; Cyclone V                                      ;
 ; Device                          ; 5CSEMA5F31C6                                   ;
 ; Timing Models                   ; Final                                          ;
 ; Logic utilization (in ALMs)     ; 102 / 32,070 ( < 1 % )                         ;
-; Total registers                 ; 150                                            ;
+; Total registers                 ; 143                                            ;
 ; Total pins                      ; 33 / 457 ( 7 % )                               ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                          ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/19/2024 22:19:44 ;
+; Start date & time ; 02/26/2025 20:57:23 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; stopwatch_top       ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 18026798746630.172410238408284         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 74780420361225.174059984318814         ; --            ; --          ; --         ;
 ; MISC_FILE                           ; IP/PLL/PLL.cmp                         ; --            ; --          ; --         ;
 ; MISC_FILE                           ; IP/PLL/PLL_sim/PLL.vho                 ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -96,24 +96,24 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4897 MB             ; 00:00:21                           ;
-; Fitter               ; 00:00:40     ; 1.0                     ; 6567 MB             ; 00:01:03                           ;
-; Assembler            ; 00:00:07     ; 1.0                     ; 4876 MB             ; 00:00:07                           ;
-; Timing Analyzer      ; 00:00:07     ; 1.1                     ; 5174 MB             ; 00:00:07                           ;
-; Total                ; 00:01:04     ; --                      ; --                  ; 00:01:38                           ;
+; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 476 MB              ; 00:00:21                           ;
+; Fitter               ; 00:00:42     ; 1.0                     ; 1584 MB             ; 00:01:00                           ;
+; Assembler            ; 00:00:07     ; 1.0                     ; 513 MB              ; 00:00:06                           ;
+; Timing Analyzer      ; 00:00:06     ; 1.1                     ; 808 MB              ; 00:00:07                           ;
+; Total                ; 00:01:05     ; --                      ; --                  ; 00:01:34                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                    ;
-+----------------------+------------------+------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-SHT95OJ  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; DESKTOP-SHT95OJ  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; DESKTOP-SHT95OJ  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; DESKTOP-SHT95OJ  ; Windows 10 ; 10.0       ; x86_64         ;
-+----------------------+------------------+------------+------------+----------------+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++----------------------+------------------+----------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
++----------------------+------------------+----------------+------------+----------------+
+; Analysis & Synthesis ; Joseph-PowerLabs ; Ubuntu 22.04.5 ; 22         ; x86_64         ;
+; Fitter               ; Joseph-PowerLabs ; Ubuntu 22.04.5 ; 22         ; x86_64         ;
+; Assembler            ; Joseph-PowerLabs ; Ubuntu 22.04.5 ; 22         ; x86_64         ;
+; Timing Analyzer      ; Joseph-PowerLabs ; Ubuntu 22.04.5 ; 22         ; x86_64         ;
++----------------------+------------------+----------------+------------+----------------+
 
 
 ------------

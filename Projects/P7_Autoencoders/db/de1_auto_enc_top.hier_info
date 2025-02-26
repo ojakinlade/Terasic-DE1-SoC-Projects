@@ -1,0 +1,55 @@
+|de1_auto_enc_top
+CLOCK_50 => CLOCK_50.IN1
+SW[0] => input_data[0].IN1
+SW[1] => input_data[1].IN1
+SW[2] => input_data[2].IN1
+SW[3] => input_data[3].IN1
+SW[4] => ~NO_FANOUT~
+SW[5] => ~NO_FANOUT~
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => ~NO_FANOUT~
+SW[9] => ~NO_FANOUT~
+LEDR[0] << auto_enc_core:auto_enc_inst.output_vec
+LEDR[1] << auto_enc_core:auto_enc_inst.output_vec
+LEDR[2] << auto_enc_core:auto_enc_inst.output_vec
+LEDR[3] << auto_enc_core:auto_enc_inst.output_vec
+LEDR[4] << <GND>
+LEDR[5] << <GND>
+LEDR[6] << <GND>
+LEDR[7] << <GND>
+LEDR[8] << <GND>
+LEDR[9] << <GND>
+
+
+|de1_auto_enc_top|auto_enc_core:auto_enc_inst
+clk => output_vec[0]~reg0.CLK
+clk => output_vec[1]~reg0.CLK
+clk => output_vec[2]~reg0.CLK
+clk => output_vec[3]~reg0.CLK
+clk => hidden[0][0].CLK
+clk => hidden[0][1].CLK
+clk => hidden[0][2].CLK
+clk => hidden[0][3].CLK
+clk => hidden[0][4].CLK
+clk => hidden[0][5].CLK
+clk => hidden[0][6].CLK
+clk => hidden[0][7].CLK
+clk => hidden[1][0].CLK
+clk => hidden[1][1].CLK
+clk => hidden[1][2].CLK
+clk => hidden[1][3].CLK
+clk => hidden[1][4].CLK
+clk => hidden[1][5].CLK
+clk => hidden[1][6].CLK
+clk => hidden[1][7].CLK
+input_vec[0] => WideOr0.IN0
+input_vec[1] => WideOr0.IN1
+input_vec[2] => WideOr0.IN2
+input_vec[3] => WideOr0.IN3
+output_vec[0] <= output_vec[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+output_vec[1] <= output_vec[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+output_vec[2] <= output_vec[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+output_vec[3] <= output_vec[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

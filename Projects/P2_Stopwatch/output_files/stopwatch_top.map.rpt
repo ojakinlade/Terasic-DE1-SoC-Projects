@@ -1,6 +1,6 @@
 Analysis & Synthesis report for stopwatch_top
-Mon Aug 19 22:19:55 2024
-Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+Wed Feb 26 20:57:33 2025
+Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
 ---------------------
@@ -37,7 +37,7 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2023  Intel Corporation. All rights reserved.
+Copyright (C) 2024  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -57,8 +57,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Aug 19 22:19:55 2024          ;
-; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
+; Analysis & Synthesis Status     ; Successful - Wed Feb 26 20:57:33 2025          ;
+; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; stopwatch_top                                  ;
 ; Top-level Entity Name           ; stopwatch_top                                  ;
 ; Family                          ; Cyclone V                                      ;
@@ -170,30 +170,29 @@ https://fpgasoftware.intel.com/eula.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
-;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                          ;
-+----------------------------------+-----------------+-----------------------------+----------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                   ; File Name with Absolute Path                                                                       ; Library ;
-+----------------------------------+-----------------+-----------------------------+----------------------------------------------------------------------------------------------------+---------+
-; src/stopwatch_top.vhd            ; yes             ; User VHDL File              ; C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/src/stopwatch_top.vhd ;         ;
-; src/sseg_counter.vhd             ; yes             ; User VHDL File              ; C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/src/sseg_counter.vhd  ;         ;
-; src/sseg_rom.vhd                 ; yes             ; User VHDL File              ; C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/src/sseg_rom.vhd      ;         ;
-; IP/PLL/PLL.vhd                   ; yes             ; User Wizard-Generated File  ; C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/IP/PLL/PLL.vhd        ; PLL     ;
-; IP/PLL/PLL/PLL_0002.v            ; yes             ; User Verilog HDL File       ; C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/IP/PLL/PLL/PLL_0002.v ; PLL     ;
-; altera_pll.v                     ; yes             ; Megafunction                ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altera_pll.v                             ;         ;
-+----------------------------------+-----------------+-----------------------------+----------------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                   ;
++----------------------------------+-----------------+-----------------------------+---------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                   ; File Name with Absolute Path                                                                ; Library ;
++----------------------------------+-----------------+-----------------------------+---------------------------------------------------------------------------------------------+---------+
+; src/stopwatch_top.vhd            ; yes             ; User VHDL File              ; /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/src/stopwatch_top.vhd ;         ;
+; src/sseg_counter.vhd             ; yes             ; User VHDL File              ; /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/src/sseg_counter.vhd  ;         ;
+; src/sseg_rom.vhd                 ; yes             ; User VHDL File              ; /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/src/sseg_rom.vhd      ;         ;
+; IP/PLL/PLL.vhd                   ; yes             ; User Wizard-Generated File  ; /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/IP/PLL/PLL.vhd        ; PLL     ;
+; IP/PLL/PLL/PLL_0002.v            ; yes             ; User Verilog HDL File       ; /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/IP/PLL/PLL/PLL_0002.v ; PLL     ;
+; altera_pll.v                     ; yes             ; Megafunction                ; /home/joseph/intelFPGA_lite/23.1std/quartus/libraries/megafunctions/altera_pll.v            ;         ;
++----------------------------------+-----------------+-----------------------------+---------------------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------+
@@ -1397,34 +1396,34 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Mon Aug 19 22:19:44 2024
+    Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+    Info: Processing started: Wed Feb 26 20:57:23 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off stopwatch -c stopwatch_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file src/stopwatch_top.vhd
-    Info (12022): Found design unit 1: stopwatch_top-stopwatch_top_rtl File: C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/src/stopwatch_top.vhd Line: 15
-    Info (12023): Found entity 1: stopwatch_top File: C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/src/stopwatch_top.vhd Line: 6
+    Info (12022): Found design unit 1: stopwatch_top-stopwatch_top_rtl File: /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/src/stopwatch_top.vhd Line: 15
+    Info (12023): Found entity 1: stopwatch_top File: /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/src/stopwatch_top.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file src/sseg_counter.vhd
-    Info (12022): Found design unit 1: sseg_counter-sseg_counter_rtl File: C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/src/sseg_counter.vhd Line: 13
-    Info (12023): Found entity 1: sseg_counter File: C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/src/sseg_counter.vhd Line: 5
+    Info (12022): Found design unit 1: sseg_counter-sseg_counter_rtl File: /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/src/sseg_counter.vhd Line: 13
+    Info (12023): Found entity 1: sseg_counter File: /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/src/sseg_counter.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file src/sseg_rom.vhd
-    Info (12022): Found design unit 1: sseg_rom-sseg_rom_rtl File: C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/src/sseg_rom.vhd Line: 10
-    Info (12023): Found entity 1: sseg_rom File: C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/src/sseg_rom.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file ip/pll/pll.vhd
-    Info (12022): Found design unit 1: PLL-rtl File: C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/IP/PLL/PLL.vhd Line: 20
-    Info (12023): Found entity 1: PLL File: C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/IP/PLL/PLL.vhd Line: 11
-Info (12021): Found 1 design units, including 1 entities, in source file ip/pll/pll/pll_0002.v
-    Info (12023): Found entity 1: PLL_0002 File: C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/IP/PLL/PLL/PLL_0002.v Line: 2
+    Info (12022): Found design unit 1: sseg_rom-sseg_rom_rtl File: /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/src/sseg_rom.vhd Line: 10
+    Info (12023): Found entity 1: sseg_rom File: /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/src/sseg_rom.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file IP/PLL/PLL.vhd
+    Info (12022): Found design unit 1: PLL-rtl File: /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/IP/PLL/PLL.vhd Line: 20
+    Info (12023): Found entity 1: PLL File: /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/IP/PLL/PLL.vhd Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file IP/PLL/PLL/PLL_0002.v
+    Info (12023): Found entity 1: PLL_0002 File: /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/IP/PLL/PLL/PLL_0002.v Line: 2
 Info (12127): Elaborating entity "stopwatch_top" for the top level hierarchy
-Info (12129): Elaborating entity "sseg_counter" using architecture "A:sseg_counter_rtl" for hierarchy "sseg_counter:counter_1" File: C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/src/stopwatch_top.vhd Line: 37
-Warning (10036): Verilog HDL or VHDL warning at sseg_counter.vhd(17): object "locked" assigned a value but never read File: C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/src/sseg_counter.vhd Line: 17
-Info (12128): Elaborating entity "PLL" for hierarchy "sseg_counter:counter_1|PLL:CLK_10MHz" File: C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/src/sseg_counter.vhd Line: 27
-Info (12128): Elaborating entity "PLL_0002" for hierarchy "sseg_counter:counter_1|PLL:CLK_10MHz|PLL_0002:pll_inst" File: C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/IP/PLL/PLL.vhd Line: 32
-Info (12128): Elaborating entity "altera_pll" for hierarchy "sseg_counter:counter_1|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i" File: C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/IP/PLL/PLL/PLL_0002.v Line: 85
+Info (12129): Elaborating entity "sseg_counter" using architecture "A:sseg_counter_rtl" for hierarchy "sseg_counter:counter_1" File: /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/src/stopwatch_top.vhd Line: 37
+Warning (10036): Verilog HDL or VHDL warning at sseg_counter.vhd(17): object "locked" assigned a value but never read File: /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/src/sseg_counter.vhd Line: 17
+Info (12128): Elaborating entity "PLL" for hierarchy "sseg_counter:counter_1|PLL:CLK_10MHz" File: /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/src/sseg_counter.vhd Line: 27
+Info (12128): Elaborating entity "PLL_0002" for hierarchy "sseg_counter:counter_1|PLL:CLK_10MHz|PLL_0002:pll_inst" File: /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/IP/PLL/PLL.vhd Line: 32
+Info (12128): Elaborating entity "altera_pll" for hierarchy "sseg_counter:counter_1|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i" File: /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/IP/PLL/PLL/PLL_0002.v Line: 85
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
-Info (12130): Elaborated megafunction instantiation "sseg_counter:counter_1|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i" File: C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/IP/PLL/PLL/PLL_0002.v Line: 85
-Info (12133): Instantiated megafunction "sseg_counter:counter_1|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i" with the following parameter: File: C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/IP/PLL/PLL/PLL_0002.v Line: 85
+Info (12130): Elaborated megafunction instantiation "sseg_counter:counter_1|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i" File: /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/IP/PLL/PLL/PLL_0002.v Line: 85
+Info (12133): Instantiated megafunction "sseg_counter:counter_1|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i" with the following parameter: File: /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/IP/PLL/PLL/PLL_0002.v Line: 85
     Info (12134): Parameter "fractional_vco_multiplier" = "false"
     Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
     Info (12134): Parameter "operation_mode" = "direct"
@@ -1485,33 +1484,33 @@ Info (12133): Instantiated megafunction "sseg_counter:counter_1|PLL:CLK_10MHz|PL
     Info (12134): Parameter "duty_cycle17" = "50"
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
-Info (12129): Elaborating entity "sseg_rom" using architecture "A:sseg_rom_rtl" for hierarchy "sseg_rom:ROM_1" File: C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/src/stopwatch_top.vhd Line: 41
-Info (12129): Elaborating entity "sseg_counter" using architecture "A:sseg_counter_rtl" for hierarchy "sseg_counter:counter_2" File: C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/src/stopwatch_top.vhd Line: 45
-Warning (10036): Verilog HDL or VHDL warning at sseg_counter.vhd(17): object "locked" assigned a value but never read File: C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/src/sseg_counter.vhd Line: 17
-Info (12129): Elaborating entity "sseg_counter" using architecture "A:sseg_counter_rtl" for hierarchy "sseg_counter:counter_3" File: C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/src/stopwatch_top.vhd Line: 53
-Warning (10036): Verilog HDL or VHDL warning at sseg_counter.vhd(17): object "locked" assigned a value but never read File: C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/src/sseg_counter.vhd Line: 17
-Info (12129): Elaborating entity "sseg_counter" using architecture "A:sseg_counter_rtl" for hierarchy "sseg_counter:counter_4" File: C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/src/stopwatch_top.vhd Line: 61
-Warning (10036): Verilog HDL or VHDL warning at sseg_counter.vhd(17): object "locked" assigned a value but never read File: C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/src/sseg_counter.vhd Line: 17
+Info (12129): Elaborating entity "sseg_rom" using architecture "A:sseg_rom_rtl" for hierarchy "sseg_rom:ROM_1" File: /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/src/stopwatch_top.vhd Line: 41
+Info (12129): Elaborating entity "sseg_counter" using architecture "A:sseg_counter_rtl" for hierarchy "sseg_counter:counter_2" File: /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/src/stopwatch_top.vhd Line: 45
+Warning (10036): Verilog HDL or VHDL warning at sseg_counter.vhd(17): object "locked" assigned a value but never read File: /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/src/sseg_counter.vhd Line: 17
+Info (12129): Elaborating entity "sseg_counter" using architecture "A:sseg_counter_rtl" for hierarchy "sseg_counter:counter_3" File: /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/src/stopwatch_top.vhd Line: 53
+Warning (10036): Verilog HDL or VHDL warning at sseg_counter.vhd(17): object "locked" assigned a value but never read File: /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/src/sseg_counter.vhd Line: 17
+Info (12129): Elaborating entity "sseg_counter" using architecture "A:sseg_counter_rtl" for hierarchy "sseg_counter:counter_4" File: /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/src/stopwatch_top.vhd Line: 61
+Warning (10036): Verilog HDL or VHDL warning at sseg_counter.vhd(17): object "locked" assigned a value but never read File: /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/src/sseg_counter.vhd Line: 17
 Info (276014): Found 4 instances of uninferred RAM logic
-    Info (276004): RAM logic "sseg_rom:ROM_4|rom" is uninferred due to inappropriate RAM size File: C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/src/sseg_rom.vhd Line: 13
-    Info (276004): RAM logic "sseg_rom:ROM_3|rom" is uninferred due to inappropriate RAM size File: C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/src/sseg_rom.vhd Line: 13
-    Info (276004): RAM logic "sseg_rom:ROM_2|rom" is uninferred due to inappropriate RAM size File: C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/src/sseg_rom.vhd Line: 13
-    Info (276004): RAM logic "sseg_rom:ROM_1|rom" is uninferred due to inappropriate RAM size File: C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/src/sseg_rom.vhd Line: 13
+    Info (276004): RAM logic "sseg_rom:ROM_4|rom" is uninferred due to inappropriate RAM size File: /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/src/sseg_rom.vhd Line: 13
+    Info (276004): RAM logic "sseg_rom:ROM_3|rom" is uninferred due to inappropriate RAM size File: /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/src/sseg_rom.vhd Line: 13
+    Info (276004): RAM logic "sseg_rom:ROM_2|rom" is uninferred due to inappropriate RAM size File: /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/src/sseg_rom.vhd Line: 13
+    Info (276004): RAM logic "sseg_rom:ROM_1|rom" is uninferred due to inappropriate RAM size File: /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/src/sseg_rom.vhd Line: 13
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 8 node(s), including 0 DDIO, 4 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/src/stopwatch_top.vhd Line: 8
-    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/src/stopwatch_top.vhd Line: 8
+    Warning (15610): No output dependent on input pin "KEY[2]" File: /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/src/stopwatch_top.vhd Line: 8
+    Warning (15610): No output dependent on input pin "KEY[3]" File: /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/src/stopwatch_top.vhd Line: 8
 Info (21057): Implemented 219 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 28 output pins
     Info (21061): Implemented 182 logic cells
     Info (21065): Implemented 4 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 4897 megabytes
-    Info: Processing ended: Mon Aug 19 22:19:55 2024
-    Info: Elapsed time: 00:00:11
+    Info: Peak virtual memory: 476 megabytes
+    Info: Processing ended: Wed Feb 26 20:57:33 2025
+    Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:21
 
 

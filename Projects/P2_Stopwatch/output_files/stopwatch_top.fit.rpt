@@ -1,6 +1,6 @@
 Fitter report for stopwatch_top
-Mon Aug 19 22:20:36 2024
-Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+Wed Feb 26 20:58:16 2025
+Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
 ---------------------
@@ -46,7 +46,7 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2023  Intel Corporation. All rights reserved.
+Copyright (C) 2024  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -66,15 +66,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +---------------------------------+------------------------------------------------+
-; Fitter Status                   ; Successful - Mon Aug 19 22:20:36 2024          ;
-; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
+; Fitter Status                   ; Successful - Wed Feb 26 20:58:16 2025          ;
+; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; stopwatch_top                                  ;
 ; Top-level Entity Name           ; stopwatch_top                                  ;
 ; Family                          ; Cyclone V                                      ;
 ; Device                          ; 5CSEMA5F31C6                                   ;
 ; Timing Models                   ; Final                                          ;
 ; Logic utilization (in ALMs)     ; 102 / 32,070 ( < 1 % )                         ;
-; Total registers                 ; 150                                            ;
+; Total registers                 ; 143                                            ;
 ; Total pins                      ; 33 / 457 ( 7 % )                               ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                          ;
@@ -152,16 +152,14 @@ https://fpgasoftware.intel.com/eula.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.01        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.5%      ;
-;     Processor 3            ;   0.5%      ;
-;     Processor 4            ;   0.5%      ;
+;     Processor 2            ;   0.8%      ;
 +----------------------------+-------------+
 
 
@@ -190,30 +188,23 @@ https://fpgasoftware.intel.com/eula.
 ; sseg_counter:counter_4|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll~PLL_REFCLK_SELECT_O_CLKOUT ; Merged     ; Placement                                         ; Fitter Periphery Placement ; CLKOUT    ;                ; sseg_counter:counter_1|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll~PLL_REFCLK_SELECT_O_CLKOUT ; CLKOUT           ;                       ;
 ; sseg_counter:counter_4|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0]                             ; Merged     ; Placement                                         ; Fitter Periphery Placement ; DIVCLK    ;                ; sseg_counter:counter_1|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0]                             ; DIVCLK           ;                       ;
 ; sseg_counter:counter_4|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0]~CLKENA0                     ; Merged     ; Placement                                         ; Fitter Periphery Placement ; OUTCLK    ;                ; sseg_counter:counter_1|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0]~CLKENA0                     ; OUTCLK           ;                       ;
+; sseg_counter:counter_1|digit[0]                                                                                           ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sseg_counter:counter_1|digit[0]~DUPLICATE                                                                                 ;                  ;                       ;
+; sseg_counter:counter_1|digit[3]                                                                                           ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sseg_counter:counter_1|digit[3]~DUPLICATE                                                                                 ;                  ;                       ;
 ; sseg_counter:counter_1|ticks[11]                                                                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sseg_counter:counter_1|ticks[11]~DUPLICATE                                                                                ;                  ;                       ;
-; sseg_counter:counter_1|ticks[13]                                                                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sseg_counter:counter_1|ticks[13]~DUPLICATE                                                                                ;                  ;                       ;
-; sseg_counter:counter_1|ticks[14]                                                                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sseg_counter:counter_1|ticks[14]~DUPLICATE                                                                                ;                  ;                       ;
-; sseg_counter:counter_1|ticks[21]                                                                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sseg_counter:counter_1|ticks[21]~DUPLICATE                                                                                ;                  ;                       ;
-; sseg_counter:counter_2|digit[0]                                                                                           ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sseg_counter:counter_2|digit[0]~DUPLICATE                                                                                 ;                  ;                       ;
 ; sseg_counter:counter_2|digit[2]                                                                                           ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sseg_counter:counter_2|digit[2]~DUPLICATE                                                                                 ;                  ;                       ;
+; sseg_counter:counter_2|digit[3]                                                                                           ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sseg_counter:counter_2|digit[3]~DUPLICATE                                                                                 ;                  ;                       ;
 ; sseg_counter:counter_2|ticks[9]                                                                                           ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sseg_counter:counter_2|ticks[9]~DUPLICATE                                                                                 ;                  ;                       ;
-; sseg_counter:counter_2|ticks[13]                                                                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sseg_counter:counter_2|ticks[13]~DUPLICATE                                                                                ;                  ;                       ;
-; sseg_counter:counter_2|ticks[14]                                                                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sseg_counter:counter_2|ticks[14]~DUPLICATE                                                                                ;                  ;                       ;
-; sseg_counter:counter_2|ticks[19]                                                                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sseg_counter:counter_2|ticks[19]~DUPLICATE                                                                                ;                  ;                       ;
-; sseg_counter:counter_2|ticks[25]                                                                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sseg_counter:counter_2|ticks[25]~DUPLICATE                                                                                ;                  ;                       ;
 ; sseg_counter:counter_3|digit[0]                                                                                           ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sseg_counter:counter_3|digit[0]~DUPLICATE                                                                                 ;                  ;                       ;
 ; sseg_counter:counter_3|digit[1]                                                                                           ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sseg_counter:counter_3|digit[1]~DUPLICATE                                                                                 ;                  ;                       ;
 ; sseg_counter:counter_3|digit[2]                                                                                           ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sseg_counter:counter_3|digit[2]~DUPLICATE                                                                                 ;                  ;                       ;
-; sseg_counter:counter_3|ticks[11]                                                                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sseg_counter:counter_3|ticks[11]~DUPLICATE                                                                                ;                  ;                       ;
-; sseg_counter:counter_3|ticks[25]                                                                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sseg_counter:counter_3|ticks[25]~DUPLICATE                                                                                ;                  ;                       ;
+; sseg_counter:counter_4|digit[0]                                                                                           ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sseg_counter:counter_4|digit[0]~DUPLICATE                                                                                 ;                  ;                       ;
 ; sseg_counter:counter_4|digit[1]                                                                                           ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sseg_counter:counter_4|digit[1]~DUPLICATE                                                                                 ;                  ;                       ;
-; sseg_counter:counter_4|digit[2]                                                                                           ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sseg_counter:counter_4|digit[2]~DUPLICATE                                                                                 ;                  ;                       ;
 ; sseg_counter:counter_4|digit[3]                                                                                           ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sseg_counter:counter_4|digit[3]~DUPLICATE                                                                                 ;                  ;                       ;
-; sseg_counter:counter_4|ticks[9]                                                                                           ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sseg_counter:counter_4|ticks[9]~DUPLICATE                                                                                 ;                  ;                       ;
-; sseg_counter:counter_4|ticks[11]                                                                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sseg_counter:counter_4|ticks[11]~DUPLICATE                                                                                ;                  ;                       ;
-; sseg_counter:counter_4|ticks[21]                                                                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sseg_counter:counter_4|ticks[21]~DUPLICATE                                                                                ;                  ;                       ;
-; sseg_counter:counter_4|ticks[22]                                                                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sseg_counter:counter_4|ticks[22]~DUPLICATE                                                                                ;                  ;                       ;
+; sseg_counter:counter_4|ticks[13]                                                                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sseg_counter:counter_4|ticks[13]~DUPLICATE                                                                                ;                  ;                       ;
+; sseg_counter:counter_4|ticks[14]                                                                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sseg_counter:counter_4|ticks[14]~DUPLICATE                                                                                ;                  ;                       ;
+; sseg_counter:counter_4|ticks[19]                                                                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sseg_counter:counter_4|ticks[19]~DUPLICATE                                                                                ;                  ;                       ;
 ; sseg_counter:counter_4|ticks[25]                                                                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sseg_counter:counter_4|ticks[25]~DUPLICATE                                                                                ;                  ;                       ;
+; sseg_counter:counter_4|ticks[26]                                                                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sseg_counter:counter_4|ticks[26]~DUPLICATE                                                                                ;                  ;                       ;
 +---------------------------------------------------------------------------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+---------------------------------------------------------------------------------------------------------------------------+------------------+-----------------------+
 
 
@@ -398,7 +389,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/output_files/stopwatch_top.pin.
+The pin-out file can be found in /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/output_files/stopwatch_top.pin.
 
 
 +------------------------------------------------------------------------------------------+
@@ -408,12 +399,12 @@ The pin-out file can be found in C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-P
 +-------------------------------------------------------------+--------------------+-------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 102 / 32,070       ; < 1 % ;
 ; ALMs needed [=A-B+C]                                        ; 102                ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 105 / 32,070       ; < 1 % ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 107 / 32,070       ; < 1 % ;
 ;         [a] ALMs used for LUT logic and registers           ; 63                 ;       ;
-;         [b] ALMs used for LUT logic                         ; 41                 ;       ;
+;         [b] ALMs used for LUT logic                         ; 43                 ;       ;
 ;         [c] ALMs used for registers                         ; 1                  ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 3 / 32,070         ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 5 / 32,070         ; < 1 % ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32,070         ; 0 %   ;
 ;         [a] Due to location constrained logic               ; 0                  ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                  ;       ;
@@ -422,8 +413,8 @@ The pin-out file can be found in C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-P
 ;                                                             ;                    ;       ;
 ; Difficulty packing design                                   ; Low                ;       ;
 ;                                                             ;                    ;       ;
-; Total LABs:  partially or completely used                   ; 20 / 3,207         ; < 1 % ;
-;     -- Logic LABs                                           ; 20                 ;       ;
+; Total LABs:  partially or completely used                   ; 19 / 3,207         ; < 1 % ;
+;     -- Logic LABs                                           ; 19                 ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
 ; Combinational ALUT usage for logic                          ; 183                ;       ;
@@ -434,13 +425,13 @@ The pin-out file can be found in C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-P
 ;     -- <=3 input functions                                  ; 119                ;       ;
 ; Combinational ALUT usage for route-throughs                 ; 0                  ;       ;
 ;                                                             ;                    ;       ;
-; Dedicated logic registers                                   ; 150                ;       ;
+; Dedicated logic registers                                   ; 143                ;       ;
 ;     -- By type:                                             ;                    ;       ;
 ;         -- Primary logic registers                          ; 126 / 64,140       ; < 1 % ;
-;         -- Secondary logic registers                        ; 24 / 64,140        ; < 1 % ;
+;         -- Secondary logic registers                        ; 17 / 64,140        ; < 1 % ;
 ;     -- By function:                                         ;                    ;       ;
 ;         -- Design implementation registers                  ; 126                ;       ;
-;         -- Routing optimization registers                   ; 24                 ;       ;
+;         -- Routing optimization registers                   ; 17                 ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
 ; I/O pins                                                    ; 33 / 457           ; 7 %   ;
@@ -496,11 +487,11 @@ The pin-out file can be found in C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-P
 ; Impedance control blocks                                    ; 0 / 4              ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
 ; Average interconnect usage (total/H/V)                      ; 0.1% / 0.1% / 0.1% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 0.9% / 0.8% / 1.2% ;       ;
-; Maximum fan-out                                             ; 151                ;       ;
-; Highest non-global fan-out                                  ; 151                ;       ;
-; Total fan-out                                               ; 1322               ;       ;
-; Average fan-out                                             ; 3.26               ;       ;
+; Peak interconnect usage (total/H/V)                         ; 0.6% / 0.6% / 0.9% ;       ;
+; Maximum fan-out                                             ; 144                ;       ;
+; Highest non-global fan-out                                  ; 144                ;       ;
+; Total fan-out                                               ; 1286               ;       ;
+; Average fan-out                                             ; 3.23               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -511,12 +502,12 @@ The pin-out file can be found in C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-P
 +-------------------------------------------------------------+-----------------------+--------------------------------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 102 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
 ; ALMs needed [=A-B+C]                                        ; 102                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 105 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 107 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
 ;         [a] ALMs used for LUT logic and registers           ; 63                    ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 41                    ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 43                    ; 0                              ;
 ;         [c] ALMs used for registers                         ; 1                     ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                     ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 3 / 32070 ( < 1 % )   ; 0 / 32070 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 5 / 32070 ( < 1 % )   ; 0 / 32070 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32070 ( 0 % )     ; 0 / 32070 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                     ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                     ; 0                              ;
@@ -525,8 +516,8 @@ The pin-out file can be found in C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-P
 ;                                                             ;                       ;                                ;
 ; Difficulty packing design                                   ; Low                   ; Low                            ;
 ;                                                             ;                       ;                                ;
-; Total LABs:  partially or completely used                   ; 20 / 3207 ( < 1 % )   ; 0 / 3207 ( 0 % )               ;
-;     -- Logic LABs                                           ; 20                    ; 0                              ;
+; Total LABs:  partially or completely used                   ; 19 / 3207 ( < 1 % )   ; 0 / 3207 ( 0 % )               ;
+;     -- Logic LABs                                           ; 19                    ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Combinational ALUT usage for logic                          ; 183                   ; 0                              ;
@@ -543,10 +534,10 @@ The pin-out file can be found in C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-P
 ; Dedicated logic registers                                   ; 0                     ; 0                              ;
 ;     -- By type:                                             ;                       ;                                ;
 ;         -- Primary logic registers                          ; 126 / 64140 ( < 1 % ) ; 0 / 64140 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 24 / 64140 ( < 1 % )  ; 0 / 64140 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 17 / 64140 ( < 1 % )  ; 0 / 64140 ( 0 % )              ;
 ;     -- By function:                                         ;                       ;                                ;
 ;         -- Design implementation registers                  ; 126                   ; 0                              ;
-;         -- Routing optimization registers                   ; 24                    ; 0                              ;
+;         -- Routing optimization registers                   ; 17                    ; 0                              ;
 ;                                                             ;                       ;                                ;
 ;                                                             ;                       ;                                ;
 ; Virtual pins                                                ; 0                     ; 0                              ;
@@ -561,18 +552,18 @@ The pin-out file can be found in C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-P
 ; PLL Reference Clock Select Block                            ; 0 / 6 ( 0 % )         ; 1 / 6 ( 16 % )                 ;
 ;                                                             ;                       ;                                ;
 ; Connections                                                 ;                       ;                                ;
-;     -- Input Connections                                    ; 300                   ; 0                              ;
-;     -- Registered Input Connections                         ; 300                   ; 0                              ;
-;     -- Output Connections                                   ; 0                     ; 300                            ;
+;     -- Input Connections                                    ; 286                   ; 0                              ;
+;     -- Registered Input Connections                         ; 286                   ; 0                              ;
+;     -- Output Connections                                   ; 0                     ; 286                            ;
 ;     -- Registered Output Connections                        ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Internal Connections                                        ;                       ;                                ;
-;     -- Total Connections                                    ; 1310                  ; 335                            ;
-;     -- Registered Connections                               ; 810                   ; 0                              ;
+;     -- Total Connections                                    ; 1274                  ; 321                            ;
+;     -- Registered Connections                               ; 787                   ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; External Connections                                        ;                       ;                                ;
-;     -- Top                                                  ; 0                     ; 300                            ;
-;     -- hard_block:auto_generated_inst                       ; 300                   ; 0                              ;
+;     -- Top                                                  ; 0                     ; 286                            ;
+;     -- hard_block:auto_generated_inst                       ; 286                   ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Partition Interface                                         ;                       ;                                ;
 ;     -- Input Ports                                          ; 5                     ; 2                              ;
@@ -601,7 +592,7 @@ The pin-out file can be found in C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-P
 ; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; CLOCK_50 ; AF14  ; 3B       ; 32           ; 0            ; 0            ; 3                     ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; KEY[0]   ; AA14  ; 3B       ; 36           ; 0            ; 0            ; 151                   ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; KEY[0]   ; AA14  ; 3B       ; 36           ; 0            ; 0            ; 144                   ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; KEY[1]   ; AA15  ; 3B       ; 36           ; 0            ; 17           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; KEY[2]   ; W15   ; 3B       ; 40           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; KEY[3]   ; Y16   ; 3B       ; 40           ; 0            ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
@@ -1578,28 +1569,28 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +--------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+
 ; PLL Reference Clock Select Blocks                                                                                  ;                                                                                                                   ;
 ;  sseg_counter:counter_1|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll~PLL_REFCLK_SELECT  ;                                                                                                                   ;
-;   --                                                                                                               ; sseg_counter:counter_4|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll~PLL_REFCLK_SELECT  ;
 ;   --                                                                                                               ; sseg_counter:counter_2|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll~PLL_REFCLK_SELECT  ;
+;   --                                                                                                               ; sseg_counter:counter_4|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll~PLL_REFCLK_SELECT  ;
 ;   --                                                                                                               ; sseg_counter:counter_3|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll~PLL_REFCLK_SELECT  ;
 ; PLL Reconfiguration Blocks                                                                                         ;                                                                                                                   ;
 ;  sseg_counter:counter_1|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll~PLL_RECONFIG       ;                                                                                                                   ;
-;   --                                                                                                               ; sseg_counter:counter_4|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll~PLL_RECONFIG       ;
 ;   --                                                                                                               ; sseg_counter:counter_2|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll~PLL_RECONFIG       ;
+;   --                                                                                                               ; sseg_counter:counter_4|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll~PLL_RECONFIG       ;
 ;   --                                                                                                               ; sseg_counter:counter_3|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll~PLL_RECONFIG       ;
 ; Fractional PLLs                                                                                                    ;                                                                                                                   ;
 ;  sseg_counter:counter_1|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll~FRACTIONAL_PLL     ;                                                                                                                   ;
-;   --                                                                                                               ; sseg_counter:counter_4|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll~FRACTIONAL_PLL     ;
 ;   --                                                                                                               ; sseg_counter:counter_2|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll~FRACTIONAL_PLL     ;
+;   --                                                                                                               ; sseg_counter:counter_4|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll~FRACTIONAL_PLL     ;
 ;   --                                                                                                               ; sseg_counter:counter_3|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll~FRACTIONAL_PLL     ;
 ; PLL Output Counters                                                                                                ;                                                                                                                   ;
 ;  sseg_counter:counter_1|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER ;                                                                                                                   ;
-;   --                                                                                                               ; sseg_counter:counter_4|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER ;
 ;   --                                                                                                               ; sseg_counter:counter_2|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER ;
+;   --                                                                                                               ; sseg_counter:counter_4|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER ;
 ;   --                                                                                                               ; sseg_counter:counter_3|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER ;
 ; Clock enable blocks                                                                                                ;                                                                                                                   ;
 ;  sseg_counter:counter_1|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0]~CLKENA0             ;                                                                                                                   ;
-;   --                                                                                                               ; sseg_counter:counter_4|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0]~CLKENA0             ;
 ;   --                                                                                                               ; sseg_counter:counter_3|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0]~CLKENA0             ;
+;   --                                                                                                               ; sseg_counter:counter_4|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0]~CLKENA0             ;
 ;   --                                                                                                               ; sseg_counter:counter_2|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0]~CLKENA0             ;
 +--------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+
 
@@ -1666,6 +1657,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;     -- PLL Fractional Division                                                                                               ; N/A                        ;
 ;     -- M Counter                                                                                                             ; 12                         ;
 ;     -- N Counter                                                                                                             ; 2                          ;
+;     -- IOPLL Self RST                                                                                                        ; Off                        ;
 ;     -- PLL Refclk Select                                                                                                     ;                            ;
 ;             -- PLL Refclk Select Location                                                                                    ; PLLREFCLKSELECT_X0_Y21_N0  ;
 ;             -- PLL Reference Clock Input 0 source                                                                            ; clk_0                      ;
@@ -1682,7 +1674,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;     -- PLL Output Counter                                                                                                    ;                            ;
 ;         -- sseg_counter:counter_1|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER ;                            ;
 ;             -- Output Clock Frequency                                                                                        ; 10.0 MHz                   ;
-;             -- Output Clock Location                                                                                         ; PLLOUTPUTCOUNTER_X0_Y20_N1 ;
+;             -- Output Clock Location                                                                                         ; PLLOUTPUTCOUNTER_X0_Y21_N1 ;
 ;             -- C Counter Odd Divider Even Duty Enable                                                                        ; Off                        ;
 ;             -- Duty Cycle                                                                                                    ; 50.0000                    ;
 ;             -- Phase Shift                                                                                                   ; 0.000000 degrees           ;
@@ -1698,17 +1690,17 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +---------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-----------------------------------------------------------------------------------------------+---------------+--------------+
 ; Compilation Hierarchy Node            ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                           ; Entity Name   ; Library Name ;
 +---------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-----------------------------------------------------------------------------------------------+---------------+--------------+
-; |stopwatch_top                        ; 102.0 (1.5)          ; 104.0 (2.0)                      ; 2.0 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 183 (3)             ; 150 (2)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 33   ; 0            ; |stopwatch_top                                                                                ; stopwatch_top ; work         ;
-;    |sseg_counter:counter_1|           ; 21.8 (21.8)          ; 22.0 (22.0)                      ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 38 (38)             ; 35 (35)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |stopwatch_top|sseg_counter:counter_1                                                         ; sseg_counter  ; work         ;
+; |stopwatch_top                        ; 101.5 (1.5)          ; 105.5 (2.0)                      ; 4.0 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 183 (3)             ; 143 (2)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 33   ; 0            ; |stopwatch_top                                                                                ; stopwatch_top ; work         ;
+;    |sseg_counter:counter_1|           ; 21.8 (21.8)          ; 22.5 (22.5)                      ; 0.7 (0.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 38 (38)             ; 34 (34)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |stopwatch_top|sseg_counter:counter_1                                                         ; sseg_counter  ; work         ;
 ;       |PLL:CLK_10MHz|                 ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |stopwatch_top|sseg_counter:counter_1|PLL:CLK_10MHz                                           ; PLL           ; pll          ;
 ;          |PLL_0002:pll_inst|          ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |stopwatch_top|sseg_counter:counter_1|PLL:CLK_10MHz|PLL_0002:pll_inst                         ; PLL_0002      ; PLL          ;
 ;             |altera_pll:altera_pll_i| ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |stopwatch_top|sseg_counter:counter_1|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i ; altera_pll    ; work         ;
-;    |sseg_counter:counter_2|           ; 21.8 (21.8)          ; 22.0 (22.0)                      ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 38 (38)             ; 38 (38)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |stopwatch_top|sseg_counter:counter_2                                                         ; sseg_counter  ; work         ;
-;    |sseg_counter:counter_3|           ; 22.0 (22.0)          ; 22.0 (22.0)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 38 (38)             ; 36 (36)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |stopwatch_top|sseg_counter:counter_3                                                         ; sseg_counter  ; work         ;
+;    |sseg_counter:counter_2|           ; 21.8 (21.8)          ; 22.5 (22.5)                      ; 0.7 (0.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 38 (38)             ; 34 (34)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |stopwatch_top|sseg_counter:counter_2                                                         ; sseg_counter  ; work         ;
+;    |sseg_counter:counter_3|           ; 21.8 (21.8)          ; 22.5 (22.5)                      ; 0.7 (0.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 38 (38)             ; 34 (34)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |stopwatch_top|sseg_counter:counter_3                                                         ; sseg_counter  ; work         ;
 ;    |sseg_counter:counter_4|           ; 21.8 (21.8)          ; 22.0 (22.0)                      ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 38 (38)             ; 39 (39)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |stopwatch_top|sseg_counter:counter_4                                                         ; sseg_counter  ; work         ;
 ;    |sseg_rom:ROM_1|                   ; 3.2 (3.2)            ; 3.5 (3.5)                        ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |stopwatch_top|sseg_rom:ROM_1                                                                 ; sseg_rom      ; work         ;
 ;    |sseg_rom:ROM_2|                   ; 3.2 (3.2)            ; 3.5 (3.5)                        ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |stopwatch_top|sseg_rom:ROM_2                                                                 ; sseg_rom      ; work         ;
-;    |sseg_rom:ROM_3|                   ; 3.3 (3.3)            ; 3.5 (3.5)                        ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |stopwatch_top|sseg_rom:ROM_3                                                                 ; sseg_rom      ; work         ;
+;    |sseg_rom:ROM_3|                   ; 3.2 (3.2)            ; 3.5 (3.5)                        ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |stopwatch_top|sseg_rom:ROM_3                                                                 ; sseg_rom      ; work         ;
 ;    |sseg_rom:ROM_4|                   ; 3.2 (3.2)            ; 3.5 (3.5)                        ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |stopwatch_top|sseg_rom:ROM_4                                                                 ; sseg_rom      ; work         ;
 +---------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-----------------------------------------------------------------------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -1779,6 +1771,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - sseg_counter:counter_4|digit[1]                                                                               ; 0                 ; 0       ;
 ;      - sseg_counter:counter_4|digit[2]                                                                               ; 0                 ; 0       ;
 ;      - sseg_counter:counter_4|digit[3]                                                                               ; 0                 ; 0       ;
+;      - sseg_counter:counter_1|ticks[18]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_1|ticks[16]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_1|ticks[17]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_1|ticks[15]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_1|ticks[14]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_1|ticks[13]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_1|ticks[12]                                                                              ; 0                 ; 0       ;
 ;      - sseg_counter:counter_1|ticks[11]                                                                              ; 0                 ; 0       ;
 ;      - sseg_counter:counter_1|ticks[10]                                                                              ; 0                 ; 0       ;
 ;      - sseg_counter:counter_1|ticks[9]                                                                               ; 0                 ; 0       ;
@@ -1790,129 +1789,115 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - sseg_counter:counter_1|ticks[3]                                                                               ; 0                 ; 0       ;
 ;      - sseg_counter:counter_1|ticks[2]                                                                               ; 0                 ; 0       ;
 ;      - sseg_counter:counter_1|ticks[1]                                                                               ; 0                 ; 0       ;
-;      - sseg_counter:counter_1|ticks[12]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_1|ticks[26]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_1|ticks[25]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_1|ticks[24]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_1|ticks[23]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_1|ticks[22]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_1|ticks[21]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_1|ticks[20]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_1|ticks[19]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_1|ticks[18]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_1|ticks[17]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_1|ticks[16]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_1|ticks[15]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_1|ticks[14]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_1|ticks[13]                                                                              ; 0                 ; 0       ;
 ;      - sseg_counter:counter_1|ticks[0]                                                                               ; 0                 ; 0       ;
-;      - sseg_counter:counter_2|ticks[7]                                                                               ; 0                 ; 0       ;
-;      - sseg_counter:counter_2|ticks[6]                                                                               ; 0                 ; 0       ;
-;      - sseg_counter:counter_2|ticks[5]                                                                               ; 0                 ; 0       ;
-;      - sseg_counter:counter_2|ticks[4]                                                                               ; 0                 ; 0       ;
-;      - sseg_counter:counter_2|ticks[3]                                                                               ; 0                 ; 0       ;
-;      - sseg_counter:counter_2|ticks[2]                                                                               ; 0                 ; 0       ;
-;      - sseg_counter:counter_2|ticks[1]                                                                               ; 0                 ; 0       ;
-;      - sseg_counter:counter_2|ticks[0]                                                                               ; 0                 ; 0       ;
-;      - sseg_counter:counter_2|ticks[26]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_2|ticks[25]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_2|ticks[24]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_2|ticks[23]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_2|ticks[22]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_2|ticks[21]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_2|ticks[20]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_2|ticks[19]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_2|ticks[18]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_2|ticks[17]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_2|ticks[16]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_2|ticks[15]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_2|ticks[14]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_2|ticks[13]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_1|ticks[20]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_1|ticks[21]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_1|ticks[19]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_1|ticks[22]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_1|ticks[23]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_1|ticks[24]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_1|ticks[25]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_1|ticks[26]                                                                              ; 0                 ; 0       ;
 ;      - sseg_counter:counter_2|ticks[12]                                                                              ; 0                 ; 0       ;
 ;      - sseg_counter:counter_2|ticks[11]                                                                              ; 0                 ; 0       ;
 ;      - sseg_counter:counter_2|ticks[10]                                                                              ; 0                 ; 0       ;
 ;      - sseg_counter:counter_2|ticks[9]                                                                               ; 0                 ; 0       ;
+;      - sseg_counter:counter_2|ticks[13]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_2|ticks[14]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_2|ticks[15]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_2|ticks[16]                                                                              ; 0                 ; 0       ;
 ;      - sseg_counter:counter_2|ticks[8]                                                                               ; 0                 ; 0       ;
+;      - sseg_counter:counter_2|ticks[0]                                                                               ; 0                 ; 0       ;
+;      - sseg_counter:counter_2|ticks[1]                                                                               ; 0                 ; 0       ;
+;      - sseg_counter:counter_2|ticks[2]                                                                               ; 0                 ; 0       ;
+;      - sseg_counter:counter_2|ticks[3]                                                                               ; 0                 ; 0       ;
+;      - sseg_counter:counter_2|ticks[4]                                                                               ; 0                 ; 0       ;
+;      - sseg_counter:counter_2|ticks[5]                                                                               ; 0                 ; 0       ;
+;      - sseg_counter:counter_2|ticks[6]                                                                               ; 0                 ; 0       ;
+;      - sseg_counter:counter_2|ticks[7]                                                                               ; 0                 ; 0       ;
+;      - sseg_counter:counter_2|ticks[18]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_2|ticks[19]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_2|ticks[20]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_2|ticks[21]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_2|ticks[22]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_2|ticks[23]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_2|ticks[24]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_2|ticks[25]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_2|ticks[26]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_2|ticks[17]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_3|ticks[8]                                                                               ; 0                 ; 0       ;
 ;      - sseg_counter:counter_3|ticks[3]                                                                               ; 0                 ; 0       ;
 ;      - sseg_counter:counter_3|ticks[2]                                                                               ; 0                 ; 0       ;
 ;      - sseg_counter:counter_3|ticks[1]                                                                               ; 0                 ; 0       ;
-;      - sseg_counter:counter_3|ticks[20]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_3|ticks[26]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_3|ticks[25]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_3|ticks[24]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_3|ticks[23]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_3|ticks[22]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_3|ticks[21]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_3|ticks[0]                                                                               ; 0                 ; 0       ;
-;      - sseg_counter:counter_3|ticks[19]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_3|ticks[18]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_3|ticks[17]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_3|ticks[16]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_3|ticks[15]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_3|ticks[14]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_3|ticks[13]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_3|ticks[12]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_3|ticks[11]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_3|ticks[10]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_3|ticks[9]                                                                               ; 0                 ; 0       ;
-;      - sseg_counter:counter_3|ticks[8]                                                                               ; 0                 ; 0       ;
-;      - sseg_counter:counter_3|ticks[7]                                                                               ; 0                 ; 0       ;
-;      - sseg_counter:counter_3|ticks[6]                                                                               ; 0                 ; 0       ;
-;      - sseg_counter:counter_3|ticks[5]                                                                               ; 0                 ; 0       ;
 ;      - sseg_counter:counter_3|ticks[4]                                                                               ; 0                 ; 0       ;
-;      - sseg_counter:counter_4|ticks[26]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_4|ticks[25]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_4|ticks[24]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_4|ticks[23]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_4|ticks[22]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_4|ticks[21]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_3|ticks[5]                                                                               ; 0                 ; 0       ;
+;      - sseg_counter:counter_3|ticks[6]                                                                               ; 0                 ; 0       ;
+;      - sseg_counter:counter_3|ticks[7]                                                                               ; 0                 ; 0       ;
+;      - sseg_counter:counter_3|ticks[0]                                                                               ; 0                 ; 0       ;
+;      - sseg_counter:counter_3|ticks[9]                                                                               ; 0                 ; 0       ;
+;      - sseg_counter:counter_3|ticks[10]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_3|ticks[11]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_3|ticks[12]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_3|ticks[13]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_3|ticks[14]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_3|ticks[16]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_3|ticks[17]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_3|ticks[18]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_3|ticks[19]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_3|ticks[20]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_3|ticks[21]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_3|ticks[22]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_3|ticks[23]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_3|ticks[24]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_3|ticks[25]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_3|ticks[26]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_3|ticks[15]                                                                              ; 0                 ; 0       ;
 ;      - sseg_counter:counter_4|ticks[20]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_4|ticks[19]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_4|ticks[18]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_4|ticks[17]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_4|ticks[16]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_4|ticks[15]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_4|ticks[14]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_4|ticks[13]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_4|ticks[12]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_4|ticks[11]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_4|ticks[10]                                                                              ; 0                 ; 0       ;
-;      - sseg_counter:counter_4|ticks[9]                                                                               ; 0                 ; 0       ;
-;      - sseg_counter:counter_4|ticks[8]                                                                               ; 0                 ; 0       ;
-;      - sseg_counter:counter_4|ticks[7]                                                                               ; 0                 ; 0       ;
-;      - sseg_counter:counter_4|ticks[6]                                                                               ; 0                 ; 0       ;
-;      - sseg_counter:counter_4|ticks[5]                                                                               ; 0                 ; 0       ;
-;      - sseg_counter:counter_4|ticks[4]                                                                               ; 0                 ; 0       ;
-;      - sseg_counter:counter_4|ticks[3]                                                                               ; 0                 ; 0       ;
-;      - sseg_counter:counter_4|ticks[2]                                                                               ; 0                 ; 0       ;
-;      - sseg_counter:counter_4|ticks[1]                                                                               ; 0                 ; 0       ;
 ;      - sseg_counter:counter_4|ticks[0]                                                                               ; 0                 ; 0       ;
+;      - sseg_counter:counter_4|ticks[1]                                                                               ; 0                 ; 0       ;
+;      - sseg_counter:counter_4|ticks[2]                                                                               ; 0                 ; 0       ;
+;      - sseg_counter:counter_4|ticks[3]                                                                               ; 0                 ; 0       ;
+;      - sseg_counter:counter_4|ticks[4]                                                                               ; 0                 ; 0       ;
+;      - sseg_counter:counter_4|ticks[5]                                                                               ; 0                 ; 0       ;
+;      - sseg_counter:counter_4|ticks[6]                                                                               ; 0                 ; 0       ;
+;      - sseg_counter:counter_4|ticks[7]                                                                               ; 0                 ; 0       ;
+;      - sseg_counter:counter_4|ticks[8]                                                                               ; 0                 ; 0       ;
+;      - sseg_counter:counter_4|ticks[9]                                                                               ; 0                 ; 0       ;
+;      - sseg_counter:counter_4|ticks[10]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_4|ticks[11]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_4|ticks[12]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_4|ticks[13]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_4|ticks[14]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_4|ticks[15]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_4|ticks[16]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_4|ticks[17]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_4|ticks[18]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_4|ticks[19]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_4|ticks[21]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_4|ticks[22]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_4|ticks[23]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_4|ticks[24]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_4|ticks[25]                                                                              ; 0                 ; 0       ;
+;      - sseg_counter:counter_4|ticks[26]                                                                              ; 0                 ; 0       ;
 ;      - en                                                                                                            ; 0                 ; 0       ;
 ;      - prevPressed                                                                                                   ; 0                 ; 0       ;
 ;      - sseg_counter:counter_1|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll~FRACTIONAL_PLL ; 0                 ; 0       ;
-;      - sseg_counter:counter_1|ticks[14]~DUPLICATE                                                                    ; 0                 ; 0       ;
-;      - sseg_counter:counter_1|ticks[13]~DUPLICATE                                                                    ; 0                 ; 0       ;
-;      - sseg_counter:counter_1|ticks[21]~DUPLICATE                                                                    ; 0                 ; 0       ;
 ;      - sseg_counter:counter_1|ticks[11]~DUPLICATE                                                                    ; 0                 ; 0       ;
 ;      - sseg_counter:counter_2|ticks[9]~DUPLICATE                                                                     ; 0                 ; 0       ;
-;      - sseg_counter:counter_2|ticks[14]~DUPLICATE                                                                    ; 0                 ; 0       ;
-;      - sseg_counter:counter_2|ticks[13]~DUPLICATE                                                                    ; 0                 ; 0       ;
-;      - sseg_counter:counter_2|ticks[19]~DUPLICATE                                                                    ; 0                 ; 0       ;
-;      - sseg_counter:counter_2|ticks[25]~DUPLICATE                                                                    ; 0                 ; 0       ;
-;      - sseg_counter:counter_3|ticks[11]~DUPLICATE                                                                    ; 0                 ; 0       ;
-;      - sseg_counter:counter_3|ticks[25]~DUPLICATE                                                                    ; 0                 ; 0       ;
-;      - sseg_counter:counter_4|ticks[11]~DUPLICATE                                                                    ; 0                 ; 0       ;
-;      - sseg_counter:counter_4|ticks[9]~DUPLICATE                                                                     ; 0                 ; 0       ;
 ;      - sseg_counter:counter_4|ticks[25]~DUPLICATE                                                                    ; 0                 ; 0       ;
-;      - sseg_counter:counter_4|ticks[22]~DUPLICATE                                                                    ; 0                 ; 0       ;
-;      - sseg_counter:counter_4|ticks[21]~DUPLICATE                                                                    ; 0                 ; 0       ;
-;      - sseg_counter:counter_2|digit[0]~DUPLICATE                                                                     ; 0                 ; 0       ;
+;      - sseg_counter:counter_4|ticks[26]~DUPLICATE                                                                    ; 0                 ; 0       ;
+;      - sseg_counter:counter_4|ticks[19]~DUPLICATE                                                                    ; 0                 ; 0       ;
+;      - sseg_counter:counter_4|ticks[13]~DUPLICATE                                                                    ; 0                 ; 0       ;
+;      - sseg_counter:counter_4|ticks[14]~DUPLICATE                                                                    ; 0                 ; 0       ;
+;      - sseg_counter:counter_1|digit[0]~DUPLICATE                                                                     ; 0                 ; 0       ;
+;      - sseg_counter:counter_1|digit[3]~DUPLICATE                                                                     ; 0                 ; 0       ;
 ;      - sseg_counter:counter_2|digit[2]~DUPLICATE                                                                     ; 0                 ; 0       ;
+;      - sseg_counter:counter_2|digit[3]~DUPLICATE                                                                     ; 0                 ; 0       ;
 ;      - sseg_counter:counter_3|digit[0]~DUPLICATE                                                                     ; 0                 ; 0       ;
 ;      - sseg_counter:counter_3|digit[1]~DUPLICATE                                                                     ; 0                 ; 0       ;
 ;      - sseg_counter:counter_3|digit[2]~DUPLICATE                                                                     ; 0                 ; 0       ;
+;      - sseg_counter:counter_4|digit[0]~DUPLICATE                                                                     ; 0                 ; 0       ;
 ;      - sseg_counter:counter_4|digit[1]~DUPLICATE                                                                     ; 0                 ; 0       ;
-;      - sseg_counter:counter_4|digit[2]~DUPLICATE                                                                     ; 0                 ; 0       ;
 ;      - sseg_counter:counter_4|digit[3]~DUPLICATE                                                                     ; 0                 ; 0       ;
 ; CLOCK_50                                                                                                             ;                   ;         ;
 ; KEY[1]                                                                                                               ;                   ;         ;
@@ -1926,18 +1911,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------------------------+----------------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                                                          ; Location                   ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-----------------------------------------------------------------------------------------------+----------------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; CLOCK_50                                                                                      ; PIN_AF14                   ; 2       ; Clock        ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-; KEY[0]                                                                                        ; PIN_AA14                   ; 151     ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; en                                                                                            ; FF_X77_Y10_N32             ; 133     ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; sseg_counter:counter_1|Equal0~5                                                               ; MLABCELL_X87_Y7_N3         ; 32      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; sseg_counter:counter_1|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0] ; PLLOUTPUTCOUNTER_X0_Y20_N1 ; 148     ; Clock        ; yes    ; Global Clock         ; GCLK5            ; --                        ;
-; sseg_counter:counter_1|digit[0]~0                                                             ; MLABCELL_X87_Y7_N18        ; 3       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; sseg_counter:counter_2|Equal0~5                                                               ; LABCELL_X81_Y11_N3         ; 33      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; sseg_counter:counter_2|digit[0]~0                                                             ; LABCELL_X81_Y11_N24        ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; sseg_counter:counter_3|Equal0~5                                                               ; LABCELL_X80_Y17_N3         ; 30      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; sseg_counter:counter_3|digit[0]~0                                                             ; LABCELL_X80_Y17_N18        ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; sseg_counter:counter_4|Equal0~5                                                               ; LABCELL_X80_Y12_N3         ; 33      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; sseg_counter:counter_4|digit[0]~0                                                             ; LABCELL_X80_Y12_N12        ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; CLOCK_50                                                                                      ; PIN_AF14                   ; 2       ; Clock        ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; KEY[0]                                                                                        ; PIN_AA14                   ; 144     ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; en                                                                                            ; FF_X77_Y12_N32             ; 124     ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; sseg_counter:counter_1|Equal0~5                                                               ; MLABCELL_X78_Y8_N18        ; 29      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; sseg_counter:counter_1|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0] ; PLLOUTPUTCOUNTER_X0_Y21_N1 ; 141     ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
+; sseg_counter:counter_1|digit[0]~0                                                             ; MLABCELL_X78_Y8_N12        ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; sseg_counter:counter_2|Equal0~5                                                               ; MLABCELL_X84_Y13_N18       ; 29      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; sseg_counter:counter_2|digit[0]~0                                                             ; MLABCELL_X84_Y13_N12       ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; sseg_counter:counter_3|Equal0~5                                                               ; LABCELL_X83_Y19_N18        ; 28      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; sseg_counter:counter_3|digit[0]~0                                                             ; LABCELL_X83_Y19_N12        ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; sseg_counter:counter_4|Equal0~5                                                               ; LABCELL_X77_Y9_N18         ; 33      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; sseg_counter:counter_4|digit[0]~0                                                             ; LABCELL_X77_Y9_N12         ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 +-----------------------------------------------------------------------------------------------+----------------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1946,8 +1931,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------------------------+----------------------------+---------+----------------------+------------------+---------------------------+
 ; Name                                                                                          ; Location                   ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-----------------------------------------------------------------------------------------------+----------------------------+---------+----------------------+------------------+---------------------------+
-; CLOCK_50                                                                                      ; PIN_AF14                   ; 2       ; Global Clock         ; GCLK6            ; --                        ;
-; sseg_counter:counter_1|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0] ; PLLOUTPUTCOUNTER_X0_Y20_N1 ; 148     ; Global Clock         ; GCLK5            ; --                        ;
+; CLOCK_50                                                                                      ; PIN_AF14                   ; 2       ; Global Clock         ; GCLK4            ; --                        ;
+; sseg_counter:counter_1|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0] ; PLLOUTPUTCOUNTER_X0_Y21_N1 ; 141     ; Global Clock         ; GCLK3            ; --                        ;
 +-----------------------------------------------------------------------------------------------+----------------------------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1956,14 +1941,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------+-------------------------+
 ; Routing Resource Type                       ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Block interconnects                         ; 179 / 289,320 ( < 1 % ) ;
-; C12 interconnects                           ; 6 / 13,420 ( < 1 % )    ;
-; C2 interconnects                            ; 72 / 119,108 ( < 1 % )  ;
-; C4 interconnects                            ; 60 / 56,300 ( < 1 % )   ;
+; Block interconnects                         ; 167 / 289,320 ( < 1 % ) ;
+; C12 interconnects                           ; 7 / 13,420 ( < 1 % )    ;
+; C2 interconnects                            ; 59 / 119,108 ( < 1 % )  ;
+; C4 interconnects                            ; 41 / 56,300 ( < 1 % )   ;
 ; DQS bus muxes                               ; 0 / 25 ( 0 % )          ;
 ; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )          ;
 ; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )          ;
-; Direct links                                ; 35 / 289,320 ( < 1 % )  ;
+; Direct links                                ; 50 / 289,320 ( < 1 % )  ;
 ; Global clocks                               ; 2 / 16 ( 13 % )         ;
 ; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )           ;
 ; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )           ;
@@ -2019,12 +2004,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )           ;
 ; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )          ;
 ; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )          ;
-; Local interconnects                         ; 110 / 84,580 ( < 1 % )  ;
+; Local interconnects                         ; 117 / 84,580 ( < 1 % )  ;
 ; Quadrant clocks                             ; 0 / 66 ( 0 % )          ;
-; R14 interconnects                           ; 11 / 12,676 ( < 1 % )   ;
-; R14/C12 interconnect drivers                ; 14 / 20,720 ( < 1 % )   ;
-; R3 interconnects                            ; 74 / 130,992 ( < 1 % )  ;
-; R6 interconnects                            ; 119 / 266,960 ( < 1 % ) ;
+; R14 interconnects                           ; 9 / 12,676 ( < 1 % )    ;
+; R14/C12 interconnect drivers                ; 12 / 20,720 ( < 1 % )   ;
+; R3 interconnects                            ; 62 / 130,992 ( < 1 % )  ;
+; R6 interconnects                            ; 115 / 266,960 ( < 1 % ) ;
 ; Spine clocks                                ; 3 / 360 ( < 1 % )       ;
 ; Wire stub REs                               ; 0 / 15,858 ( 0 % )      ;
 +---------------------------------------------+-------------------------+
@@ -2048,33 +2033,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------+-----------+-----------------------------------+------------------------------------------------------------------------------------+----------+--------------------------------------------------------------------------+---------------------+-------------------+
 ; Status       ; ID        ; Category                          ; Rule Description                                                                   ; Severity ; Information                                                              ; Area                ; Extra Information ;
 +--------------+-----------+-----------------------------------+------------------------------------------------------------------------------------+----------+--------------------------------------------------------------------------+---------------------+-------------------+
-; Pass         ; IO_000001 ; Capacity Checks                   ; Number of pins in an I/O bank should not exceed the number of locations available. ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
 ; Inapplicable ; IO_000002 ; Capacity Checks                   ; Number of clocks in an I/O bank should not exceed the number of clocks available.  ; Critical ; No Global Signal assignments found.                                      ; I/O                 ;                   ;
+; Pass         ; IO_000001 ; Capacity Checks                   ; Number of pins in an I/O bank should not exceed the number of locations available. ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
 ; Pass         ; IO_000003 ; Capacity Checks                   ; Number of pins in a Vrefgroup should not exceed the number of locations available. ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
 ; Inapplicable ; IO_000004 ; Voltage Compatibility Checks      ; The I/O bank should support the requested VCCIO.                                   ; Critical ; No IOBANK_VCCIO assignments found.                                       ; I/O                 ;                   ;
 ; Inapplicable ; IO_000005 ; Voltage Compatibility Checks      ; The I/O bank should not have competing VREF values.                                ; Critical ; No VREF I/O Standard assignments found.                                  ; I/O                 ;                   ;
 ; Pass         ; IO_000006 ; Voltage Compatibility Checks      ; The I/O bank should not have competing VCCIO values.                               ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
 ; Pass         ; IO_000007 ; Valid Location Checks             ; Checks for unavailable locations.                                                  ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
 ; Inapplicable ; IO_000008 ; Valid Location Checks             ; Checks for reserved locations.                                                     ; Critical ; No reserved LogicLock region found.                                      ; I/O                 ;                   ;
-; Pass         ; IO_000009 ; I/O Properties Checks for One I/O ; The location should support the requested I/O standard.                            ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
-; Pass         ; IO_000010 ; I/O Properties Checks for One I/O ; The location should support the requested I/O direction.                           ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
-; Inapplicable ; IO_000011 ; I/O Properties Checks for One I/O ; The location should support the requested Current Strength.                        ; Critical ; No Current Strength assignments found.                                   ; I/O                 ;                   ;
-; Pass         ; IO_000012 ; I/O Properties Checks for One I/O ; The location should support the requested On Chip Termination value.               ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
-; Inapplicable ; IO_000013 ; I/O Properties Checks for One I/O ; The location should support the requested Bus Hold value.                          ; Critical ; No Enable Bus-Hold Circuitry assignments found.                          ; I/O                 ;                   ;
-; Inapplicable ; IO_000014 ; I/O Properties Checks for One I/O ; The location should support the requested Weak Pull Up value.                      ; Critical ; No Weak Pull-Up Resistor assignments found.                              ; I/O                 ;                   ;
-; Inapplicable ; IO_000015 ; I/O Properties Checks for One I/O ; The location should support the requested PCI Clamp Diode.                         ; Critical ; No Clamping Diode assignments found.                                     ; I/O                 ;                   ;
-; Inapplicable ; IO_000018 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Current Strength.                    ; Critical ; No Current Strength assignments found.                                   ; I/O                 ;                   ;
-; Pass         ; IO_000019 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested On Chip Termination value.           ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
-; Inapplicable ; IO_000020 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested PCI Clamp Diode.                     ; Critical ; No Clamping Diode assignments found.                                     ; I/O                 ;                   ;
-; Inapplicable ; IO_000021 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Weak Pull Up value.                  ; Critical ; No Weak Pull-Up Resistor assignments found.                              ; I/O                 ;                   ;
-; Inapplicable ; IO_000022 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Bus Hold value.                      ; Critical ; No Enable Bus-Hold Circuitry assignments found.                          ; I/O                 ;                   ;
-; Inapplicable ; IO_000023 ; I/O Properties Checks for One I/O ; The I/O standard should support the Open Drain value.                              ; Critical ; No open drain assignments found.                                         ; I/O                 ;                   ;
-; Pass         ; IO_000024 ; I/O Properties Checks for One I/O ; The I/O direction should support the On Chip Termination value.                    ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
-; Inapplicable ; IO_000026 ; I/O Properties Checks for One I/O ; On Chip Termination and Current Strength should not be used at the same time.      ; Critical ; No Current Strength assignments found.                                   ; I/O                 ;                   ;
-; Inapplicable ; IO_000027 ; I/O Properties Checks for One I/O ; Weak Pull Up and Bus Hold should not be used at the same time.                     ; Critical ; No Enable Bus-Hold Circuitry or Weak Pull-Up Resistor assignments found. ; I/O                 ;                   ;
-; Inapplicable ; IO_000045 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Slew Rate value.                     ; Critical ; No Slew Rate assignments found.                                          ; I/O                 ;                   ;
-; Inapplicable ; IO_000046 ; I/O Properties Checks for One I/O ; The location should support the requested Slew Rate value.                         ; Critical ; No Slew Rate assignments found.                                          ; I/O                 ;                   ;
 ; Inapplicable ; IO_000047 ; I/O Properties Checks for One I/O ; On Chip Termination and Slew Rate should not be used at the same time.             ; Critical ; No Slew Rate assignments found.                                          ; I/O                 ;                   ;
+; Inapplicable ; IO_000046 ; I/O Properties Checks for One I/O ; The location should support the requested Slew Rate value.                         ; Critical ; No Slew Rate assignments found.                                          ; I/O                 ;                   ;
+; Inapplicable ; IO_000045 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Slew Rate value.                     ; Critical ; No Slew Rate assignments found.                                          ; I/O                 ;                   ;
+; Inapplicable ; IO_000027 ; I/O Properties Checks for One I/O ; Weak Pull Up and Bus Hold should not be used at the same time.                     ; Critical ; No Enable Bus-Hold Circuitry or Weak Pull-Up Resistor assignments found. ; I/O                 ;                   ;
+; Inapplicable ; IO_000026 ; I/O Properties Checks for One I/O ; On Chip Termination and Current Strength should not be used at the same time.      ; Critical ; No Current Strength assignments found.                                   ; I/O                 ;                   ;
+; Pass         ; IO_000024 ; I/O Properties Checks for One I/O ; The I/O direction should support the On Chip Termination value.                    ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
+; Inapplicable ; IO_000023 ; I/O Properties Checks for One I/O ; The I/O standard should support the Open Drain value.                              ; Critical ; No open drain assignments found.                                         ; I/O                 ;                   ;
+; Inapplicable ; IO_000022 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Bus Hold value.                      ; Critical ; No Enable Bus-Hold Circuitry assignments found.                          ; I/O                 ;                   ;
+; Inapplicable ; IO_000021 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Weak Pull Up value.                  ; Critical ; No Weak Pull-Up Resistor assignments found.                              ; I/O                 ;                   ;
+; Inapplicable ; IO_000020 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested PCI Clamp Diode.                     ; Critical ; No Clamping Diode assignments found.                                     ; I/O                 ;                   ;
+; Pass         ; IO_000019 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested On Chip Termination value.           ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
+; Inapplicable ; IO_000018 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Current Strength.                    ; Critical ; No Current Strength assignments found.                                   ; I/O                 ;                   ;
+; Inapplicable ; IO_000015 ; I/O Properties Checks for One I/O ; The location should support the requested PCI Clamp Diode.                         ; Critical ; No Clamping Diode assignments found.                                     ; I/O                 ;                   ;
+; Inapplicable ; IO_000014 ; I/O Properties Checks for One I/O ; The location should support the requested Weak Pull Up value.                      ; Critical ; No Weak Pull-Up Resistor assignments found.                              ; I/O                 ;                   ;
+; Inapplicable ; IO_000013 ; I/O Properties Checks for One I/O ; The location should support the requested Bus Hold value.                          ; Critical ; No Enable Bus-Hold Circuitry assignments found.                          ; I/O                 ;                   ;
+; Pass         ; IO_000012 ; I/O Properties Checks for One I/O ; The location should support the requested On Chip Termination value.               ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
+; Inapplicable ; IO_000011 ; I/O Properties Checks for One I/O ; The location should support the requested Current Strength.                        ; Critical ; No Current Strength assignments found.                                   ; I/O                 ;                   ;
+; Pass         ; IO_000010 ; I/O Properties Checks for One I/O ; The location should support the requested I/O direction.                           ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
+; Pass         ; IO_000009 ; I/O Properties Checks for One I/O ; The location should support the requested I/O standard.                            ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
 ; Inapplicable ; IO_000034 ; SI Related Distance Checks        ; Single-ended outputs should be 0 LAB row(s) away from a differential I/O.          ; High     ; No Differential I/O Standard assignments found.                          ; I/O                 ;                   ;
 ; ----         ; ----      ; Disclaimer                        ; OCT rules are checked but not reported.                                            ; None     ; ----                                                                     ; On Chip Termination ;                   ;
 +--------------+-----------+-----------------------------------+------------------------------------------------------------------------------------+----------+--------------------------------------------------------------------------+---------------------+-------------------+
@@ -2082,47 +2067,47 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; I/O Rules Matrix                                                                                                                                                                                                                                                                                                                                                                                                                     ;
-+--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
-; Pin/Rules          ; IO_000001 ; IO_000002    ; IO_000003 ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007 ; IO_000008    ; IO_000009 ; IO_000010 ; IO_000011    ; IO_000012    ; IO_000013    ; IO_000014    ; IO_000015    ; IO_000018    ; IO_000019    ; IO_000020    ; IO_000021    ; IO_000022    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000046    ; IO_000047    ; IO_000034    ;
-+--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
-; Total Pass         ; 33        ; 0            ; 33        ; 0            ; 0            ; 33        ; 33        ; 0            ; 33        ; 33        ; 0            ; 28           ; 0            ; 0            ; 0            ; 0            ; 28           ; 0            ; 0            ; 0            ; 0            ; 28           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
-; Total Unchecked    ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
-; Total Inapplicable ; 0         ; 33           ; 0         ; 33           ; 33           ; 0         ; 0         ; 33           ; 0         ; 0         ; 33           ; 5            ; 33           ; 33           ; 33           ; 33           ; 5            ; 33           ; 33           ; 33           ; 33           ; 5            ; 33           ; 33           ; 33           ; 33           ; 33           ; 33           ;
-; Total Fail         ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
-; KEY[2]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; KEY[3]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; HEX0[0]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; HEX0[1]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; HEX0[2]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; HEX0[3]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; HEX0[4]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; HEX0[5]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; HEX0[6]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; HEX1[0]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; HEX1[1]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; HEX1[2]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; HEX1[3]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; HEX1[4]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; HEX1[5]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; HEX1[6]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; HEX2[0]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; HEX2[1]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; HEX2[2]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; HEX2[3]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; HEX2[4]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; HEX2[5]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; HEX2[6]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; HEX3[0]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; HEX3[1]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; HEX3[2]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; HEX3[3]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; HEX3[4]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; HEX3[5]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; HEX3[6]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; KEY[0]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; CLOCK_50           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; KEY[1]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-+--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
++--------------------+--------------+-----------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+-----------+--------------+
+; Pin/Rules          ; IO_000002    ; IO_000001 ; IO_000003 ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007 ; IO_000008    ; IO_000047    ; IO_000046    ; IO_000045    ; IO_000027    ; IO_000026    ; IO_000024    ; IO_000023    ; IO_000022    ; IO_000021    ; IO_000020    ; IO_000019    ; IO_000018    ; IO_000015    ; IO_000014    ; IO_000013    ; IO_000012    ; IO_000011    ; IO_000010 ; IO_000009 ; IO_000034    ;
++--------------------+--------------+-----------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+-----------+--------------+
+; Total Pass         ; 0            ; 33        ; 33        ; 0            ; 0            ; 33        ; 33        ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 28           ; 0            ; 0            ; 0            ; 0            ; 28           ; 0            ; 0            ; 0            ; 0            ; 28           ; 0            ; 33        ; 33        ; 0            ;
+; Total Unchecked    ; 0            ; 0         ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0         ; 0            ;
+; Total Inapplicable ; 33           ; 0         ; 0         ; 33           ; 33           ; 0         ; 0         ; 33           ; 33           ; 33           ; 33           ; 33           ; 33           ; 5            ; 33           ; 33           ; 33           ; 33           ; 5            ; 33           ; 33           ; 33           ; 33           ; 5            ; 33           ; 0         ; 0         ; 33           ;
+; Total Fail         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0         ; 0            ;
+; KEY[2]             ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; KEY[3]             ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; HEX0[0]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; HEX0[1]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; HEX0[2]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; HEX0[3]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; HEX0[4]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; HEX0[5]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; HEX0[6]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; HEX1[0]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; HEX1[1]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; HEX1[2]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; HEX1[3]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; HEX1[4]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; HEX1[5]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; HEX1[6]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; HEX2[0]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; HEX2[1]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; HEX2[2]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; HEX2[3]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; HEX2[4]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; HEX2[5]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; HEX2[6]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; HEX3[0]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; HEX3[1]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; HEX3[2]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; HEX3[3]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; HEX3[4]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; HEX3[5]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; HEX3[6]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; KEY[0]             ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; CLOCK_50           ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; KEY[1]             ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
++--------------------+--------------+-----------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+-----------+--------------+
 
 
 +------------------------------------------------------------------------------------------------+
@@ -2173,120 +2158,120 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+-------------------+
 ; Source Clock(s)                                                                              ; Destination Clock(s)                                                                ; Delay Added in ns ;
 +----------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+-------------------+
-; CLOCK_50                                                                                     ; counter_1|CLK_10MHz|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 68.3              ;
-; CLOCK_50,counter_1|CLK_10MHz|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; counter_1|CLK_10MHz|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 13.1              ;
-; counter_1|CLK_10MHz|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; counter_1|CLK_10MHz|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 9.3               ;
+; CLOCK_50                                                                                     ; counter_1|CLK_10MHz|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 58.8              ;
+; CLOCK_50,counter_1|CLK_10MHz|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; counter_1|CLK_10MHz|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 12.8              ;
+; counter_1|CLK_10MHz|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; counter_1|CLK_10MHz|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 10.3              ;
 +----------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
 
 
-+-----------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                           ;
-+----------------------------------+----------------------------------+-------------------+
-; Source Register                  ; Destination Register             ; Delay Added in ns ;
-+----------------------------------+----------------------------------+-------------------+
-; en                               ; sseg_counter:counter_2|ticks[10] ; 5.660             ;
-; sseg_counter:counter_2|ticks[26] ; sseg_counter:counter_2|digit[0]  ; 3.496             ;
-; sseg_counter:counter_2|ticks[25] ; sseg_counter:counter_2|digit[0]  ; 3.496             ;
-; sseg_counter:counter_2|ticks[24] ; sseg_counter:counter_2|digit[0]  ; 3.496             ;
-; sseg_counter:counter_2|ticks[22] ; sseg_counter:counter_2|digit[0]  ; 3.496             ;
-; sseg_counter:counter_2|ticks[21] ; sseg_counter:counter_2|digit[0]  ; 3.496             ;
-; sseg_counter:counter_2|ticks[20] ; sseg_counter:counter_2|digit[0]  ; 3.496             ;
-; sseg_counter:counter_2|ticks[19] ; sseg_counter:counter_2|digit[0]  ; 3.496             ;
-; sseg_counter:counter_2|ticks[18] ; sseg_counter:counter_2|digit[0]  ; 3.496             ;
-; sseg_counter:counter_2|ticks[17] ; sseg_counter:counter_2|digit[0]  ; 3.496             ;
-; sseg_counter:counter_2|ticks[16] ; sseg_counter:counter_2|digit[0]  ; 3.496             ;
-; sseg_counter:counter_2|ticks[15] ; sseg_counter:counter_2|digit[0]  ; 3.496             ;
-; sseg_counter:counter_2|ticks[14] ; sseg_counter:counter_2|digit[0]  ; 3.496             ;
-; sseg_counter:counter_2|ticks[13] ; sseg_counter:counter_2|digit[0]  ; 3.496             ;
-; sseg_counter:counter_2|ticks[12] ; sseg_counter:counter_2|digit[0]  ; 3.496             ;
-; sseg_counter:counter_2|ticks[11] ; sseg_counter:counter_2|digit[0]  ; 3.496             ;
-; sseg_counter:counter_2|ticks[9]  ; sseg_counter:counter_2|digit[0]  ; 3.496             ;
-; sseg_counter:counter_2|ticks[8]  ; sseg_counter:counter_2|digit[0]  ; 3.496             ;
-; sseg_counter:counter_2|ticks[7]  ; sseg_counter:counter_2|digit[0]  ; 3.496             ;
-; sseg_counter:counter_2|ticks[6]  ; sseg_counter:counter_2|digit[0]  ; 3.496             ;
-; sseg_counter:counter_2|ticks[5]  ; sseg_counter:counter_2|digit[0]  ; 3.496             ;
-; sseg_counter:counter_2|ticks[4]  ; sseg_counter:counter_2|digit[0]  ; 3.496             ;
-; sseg_counter:counter_2|ticks[3]  ; sseg_counter:counter_2|digit[0]  ; 3.496             ;
-; sseg_counter:counter_2|ticks[2]  ; sseg_counter:counter_2|digit[0]  ; 3.496             ;
-; sseg_counter:counter_2|ticks[1]  ; sseg_counter:counter_2|digit[0]  ; 3.496             ;
-; sseg_counter:counter_2|ticks[0]  ; sseg_counter:counter_2|digit[0]  ; 3.496             ;
-; sseg_counter:counter_2|ticks[23] ; sseg_counter:counter_2|digit[0]  ; 3.496             ;
-; sseg_counter:counter_2|ticks[10] ; sseg_counter:counter_2|digit[0]  ; 3.496             ;
-; sseg_counter:counter_4|ticks[26] ; sseg_counter:counter_4|digit[0]  ; 3.232             ;
-; sseg_counter:counter_4|ticks[25] ; sseg_counter:counter_4|digit[0]  ; 3.232             ;
-; sseg_counter:counter_4|ticks[24] ; sseg_counter:counter_4|digit[0]  ; 3.232             ;
-; sseg_counter:counter_4|ticks[23] ; sseg_counter:counter_4|digit[0]  ; 3.232             ;
-; sseg_counter:counter_4|ticks[22] ; sseg_counter:counter_4|digit[0]  ; 3.232             ;
-; sseg_counter:counter_4|ticks[21] ; sseg_counter:counter_4|digit[0]  ; 3.232             ;
-; sseg_counter:counter_4|ticks[20] ; sseg_counter:counter_4|digit[0]  ; 3.232             ;
-; sseg_counter:counter_4|ticks[19] ; sseg_counter:counter_4|digit[0]  ; 3.232             ;
-; sseg_counter:counter_4|ticks[18] ; sseg_counter:counter_4|digit[0]  ; 3.232             ;
-; sseg_counter:counter_4|ticks[17] ; sseg_counter:counter_4|digit[0]  ; 3.232             ;
-; sseg_counter:counter_4|ticks[16] ; sseg_counter:counter_4|digit[0]  ; 3.232             ;
-; sseg_counter:counter_4|ticks[14] ; sseg_counter:counter_4|digit[0]  ; 3.232             ;
-; sseg_counter:counter_4|ticks[13] ; sseg_counter:counter_4|digit[0]  ; 3.232             ;
-; sseg_counter:counter_4|ticks[12] ; sseg_counter:counter_4|digit[0]  ; 3.232             ;
-; sseg_counter:counter_4|ticks[11] ; sseg_counter:counter_4|digit[0]  ; 3.232             ;
-; sseg_counter:counter_4|ticks[10] ; sseg_counter:counter_4|digit[0]  ; 3.232             ;
-; sseg_counter:counter_4|ticks[9]  ; sseg_counter:counter_4|digit[0]  ; 3.232             ;
-; sseg_counter:counter_4|ticks[8]  ; sseg_counter:counter_4|digit[0]  ; 3.232             ;
-; sseg_counter:counter_4|ticks[7]  ; sseg_counter:counter_4|digit[0]  ; 3.232             ;
-; sseg_counter:counter_4|ticks[6]  ; sseg_counter:counter_4|digit[0]  ; 3.232             ;
-; sseg_counter:counter_4|ticks[5]  ; sseg_counter:counter_4|digit[0]  ; 3.232             ;
-; sseg_counter:counter_4|ticks[4]  ; sseg_counter:counter_4|digit[0]  ; 3.232             ;
-; sseg_counter:counter_4|ticks[3]  ; sseg_counter:counter_4|digit[0]  ; 3.232             ;
-; sseg_counter:counter_4|ticks[1]  ; sseg_counter:counter_4|digit[0]  ; 3.232             ;
-; sseg_counter:counter_4|ticks[0]  ; sseg_counter:counter_4|digit[0]  ; 3.232             ;
-; sseg_counter:counter_4|ticks[15] ; sseg_counter:counter_4|digit[0]  ; 3.232             ;
-; sseg_counter:counter_4|ticks[2]  ; sseg_counter:counter_4|digit[0]  ; 3.232             ;
-; sseg_counter:counter_1|ticks[26] ; sseg_counter:counter_1|digit[0]  ; 3.200             ;
-; sseg_counter:counter_1|ticks[25] ; sseg_counter:counter_1|digit[0]  ; 3.200             ;
-; sseg_counter:counter_1|ticks[24] ; sseg_counter:counter_1|digit[0]  ; 3.200             ;
-; sseg_counter:counter_1|ticks[23] ; sseg_counter:counter_1|digit[0]  ; 3.200             ;
-; sseg_counter:counter_1|ticks[22] ; sseg_counter:counter_1|digit[0]  ; 3.200             ;
-; sseg_counter:counter_1|ticks[20] ; sseg_counter:counter_1|digit[0]  ; 3.200             ;
-; sseg_counter:counter_1|ticks[19] ; sseg_counter:counter_1|digit[0]  ; 3.200             ;
-; sseg_counter:counter_1|ticks[18] ; sseg_counter:counter_1|digit[0]  ; 3.200             ;
-; sseg_counter:counter_1|ticks[17] ; sseg_counter:counter_1|digit[0]  ; 3.200             ;
-; sseg_counter:counter_1|ticks[16] ; sseg_counter:counter_1|digit[0]  ; 3.200             ;
-; sseg_counter:counter_1|ticks[15] ; sseg_counter:counter_1|digit[0]  ; 3.200             ;
-; sseg_counter:counter_1|ticks[13] ; sseg_counter:counter_1|digit[0]  ; 3.200             ;
-; sseg_counter:counter_1|ticks[21] ; sseg_counter:counter_1|digit[0]  ; 3.200             ;
-; sseg_counter:counter_1|ticks[11] ; sseg_counter:counter_1|digit[0]  ; 3.200             ;
-; sseg_counter:counter_1|ticks[10] ; sseg_counter:counter_1|digit[0]  ; 3.200             ;
-; sseg_counter:counter_1|ticks[9]  ; sseg_counter:counter_1|digit[0]  ; 3.200             ;
-; sseg_counter:counter_1|ticks[8]  ; sseg_counter:counter_1|digit[0]  ; 3.200             ;
-; sseg_counter:counter_1|ticks[7]  ; sseg_counter:counter_1|digit[0]  ; 3.200             ;
-; sseg_counter:counter_1|ticks[6]  ; sseg_counter:counter_1|digit[0]  ; 3.200             ;
-; sseg_counter:counter_1|ticks[5]  ; sseg_counter:counter_1|digit[0]  ; 3.200             ;
-; sseg_counter:counter_1|ticks[4]  ; sseg_counter:counter_1|digit[0]  ; 3.200             ;
-; sseg_counter:counter_1|ticks[3]  ; sseg_counter:counter_1|digit[0]  ; 3.200             ;
-; sseg_counter:counter_1|ticks[2]  ; sseg_counter:counter_1|digit[0]  ; 3.200             ;
-; sseg_counter:counter_1|ticks[1]  ; sseg_counter:counter_1|digit[0]  ; 3.200             ;
-; sseg_counter:counter_1|ticks[0]  ; sseg_counter:counter_1|digit[0]  ; 3.200             ;
-; sseg_counter:counter_1|ticks[12] ; sseg_counter:counter_1|digit[0]  ; 3.200             ;
-; sseg_counter:counter_1|ticks[14] ; sseg_counter:counter_1|digit[0]  ; 3.200             ;
-; sseg_counter:counter_3|ticks[26] ; sseg_counter:counter_3|digit[0]  ; 3.151             ;
-; sseg_counter:counter_3|ticks[25] ; sseg_counter:counter_3|digit[0]  ; 3.151             ;
-; sseg_counter:counter_3|ticks[24] ; sseg_counter:counter_3|digit[0]  ; 3.151             ;
-; sseg_counter:counter_3|ticks[23] ; sseg_counter:counter_3|digit[0]  ; 3.151             ;
-; sseg_counter:counter_3|ticks[22] ; sseg_counter:counter_3|digit[0]  ; 3.151             ;
-; sseg_counter:counter_3|ticks[20] ; sseg_counter:counter_3|digit[0]  ; 3.151             ;
-; sseg_counter:counter_3|ticks[21] ; sseg_counter:counter_3|digit[0]  ; 3.151             ;
-; sseg_counter:counter_3|ticks[18] ; sseg_counter:counter_3|digit[0]  ; 3.151             ;
-; sseg_counter:counter_3|ticks[17] ; sseg_counter:counter_3|digit[0]  ; 3.151             ;
-; sseg_counter:counter_3|ticks[16] ; sseg_counter:counter_3|digit[0]  ; 3.151             ;
-; sseg_counter:counter_3|ticks[15] ; sseg_counter:counter_3|digit[0]  ; 3.151             ;
-; sseg_counter:counter_3|ticks[14] ; sseg_counter:counter_3|digit[0]  ; 3.151             ;
-; sseg_counter:counter_3|ticks[13] ; sseg_counter:counter_3|digit[0]  ; 3.151             ;
-; sseg_counter:counter_3|ticks[12] ; sseg_counter:counter_3|digit[0]  ; 3.151             ;
-; sseg_counter:counter_3|ticks[11] ; sseg_counter:counter_3|digit[0]  ; 3.151             ;
-; sseg_counter:counter_3|ticks[10] ; sseg_counter:counter_3|digit[0]  ; 3.151             ;
-; sseg_counter:counter_3|ticks[9]  ; sseg_counter:counter_3|digit[0]  ; 3.151             ;
-; sseg_counter:counter_3|ticks[8]  ; sseg_counter:counter_3|digit[0]  ; 3.151             ;
-+----------------------------------+----------------------------------+-------------------+
++----------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                          ;
++----------------------------------+---------------------------------+-------------------+
+; Source Register                  ; Destination Register            ; Delay Added in ns ;
++----------------------------------+---------------------------------+-------------------+
+; en                               ; sseg_counter:counter_4|digit[2] ; 4.900             ;
+; sseg_counter:counter_2|ticks[26] ; sseg_counter:counter_2|digit[0] ; 3.314             ;
+; sseg_counter:counter_2|ticks[23] ; sseg_counter:counter_2|digit[0] ; 3.314             ;
+; sseg_counter:counter_2|ticks[22] ; sseg_counter:counter_2|digit[0] ; 3.314             ;
+; sseg_counter:counter_2|ticks[21] ; sseg_counter:counter_2|digit[0] ; 3.314             ;
+; sseg_counter:counter_2|ticks[20] ; sseg_counter:counter_2|digit[0] ; 3.314             ;
+; sseg_counter:counter_2|ticks[19] ; sseg_counter:counter_2|digit[0] ; 3.314             ;
+; sseg_counter:counter_2|ticks[24] ; sseg_counter:counter_2|digit[0] ; 3.314             ;
+; sseg_counter:counter_2|ticks[17] ; sseg_counter:counter_2|digit[0] ; 3.314             ;
+; sseg_counter:counter_2|ticks[18] ; sseg_counter:counter_2|digit[0] ; 3.314             ;
+; sseg_counter:counter_2|ticks[15] ; sseg_counter:counter_2|digit[0] ; 3.314             ;
+; sseg_counter:counter_2|ticks[14] ; sseg_counter:counter_2|digit[0] ; 3.314             ;
+; sseg_counter:counter_2|ticks[13] ; sseg_counter:counter_2|digit[0] ; 3.314             ;
+; sseg_counter:counter_2|ticks[12] ; sseg_counter:counter_2|digit[0] ; 3.314             ;
+; sseg_counter:counter_2|ticks[11] ; sseg_counter:counter_2|digit[0] ; 3.314             ;
+; sseg_counter:counter_2|ticks[10] ; sseg_counter:counter_2|digit[0] ; 3.314             ;
+; sseg_counter:counter_2|ticks[9]  ; sseg_counter:counter_2|digit[0] ; 3.314             ;
+; sseg_counter:counter_2|ticks[16] ; sseg_counter:counter_2|digit[0] ; 3.314             ;
+; sseg_counter:counter_2|ticks[7]  ; sseg_counter:counter_2|digit[0] ; 3.314             ;
+; sseg_counter:counter_2|ticks[6]  ; sseg_counter:counter_2|digit[0] ; 3.314             ;
+; sseg_counter:counter_2|ticks[5]  ; sseg_counter:counter_2|digit[0] ; 3.314             ;
+; sseg_counter:counter_2|ticks[4]  ; sseg_counter:counter_2|digit[0] ; 3.314             ;
+; sseg_counter:counter_2|ticks[3]  ; sseg_counter:counter_2|digit[0] ; 3.314             ;
+; sseg_counter:counter_2|ticks[8]  ; sseg_counter:counter_2|digit[0] ; 3.314             ;
+; sseg_counter:counter_2|ticks[1]  ; sseg_counter:counter_2|digit[0] ; 3.314             ;
+; sseg_counter:counter_2|ticks[0]  ; sseg_counter:counter_2|digit[0] ; 3.314             ;
+; sseg_counter:counter_2|ticks[2]  ; sseg_counter:counter_2|digit[0] ; 3.314             ;
+; sseg_counter:counter_2|ticks[25] ; sseg_counter:counter_2|digit[0] ; 3.314             ;
+; sseg_counter:counter_3|ticks[26] ; sseg_counter:counter_3|digit[0] ; 3.176             ;
+; sseg_counter:counter_3|ticks[23] ; sseg_counter:counter_3|digit[0] ; 3.176             ;
+; sseg_counter:counter_3|ticks[22] ; sseg_counter:counter_3|digit[0] ; 3.176             ;
+; sseg_counter:counter_3|ticks[21] ; sseg_counter:counter_3|digit[0] ; 3.176             ;
+; sseg_counter:counter_3|ticks[20] ; sseg_counter:counter_3|digit[0] ; 3.176             ;
+; sseg_counter:counter_3|ticks[19] ; sseg_counter:counter_3|digit[0] ; 3.176             ;
+; sseg_counter:counter_3|ticks[24] ; sseg_counter:counter_3|digit[0] ; 3.176             ;
+; sseg_counter:counter_3|ticks[17] ; sseg_counter:counter_3|digit[0] ; 3.176             ;
+; sseg_counter:counter_3|ticks[16] ; sseg_counter:counter_3|digit[0] ; 3.176             ;
+; sseg_counter:counter_3|ticks[15] ; sseg_counter:counter_3|digit[0] ; 3.176             ;
+; sseg_counter:counter_3|ticks[14] ; sseg_counter:counter_3|digit[0] ; 3.176             ;
+; sseg_counter:counter_3|ticks[13] ; sseg_counter:counter_3|digit[0] ; 3.176             ;
+; sseg_counter:counter_3|ticks[12] ; sseg_counter:counter_3|digit[0] ; 3.176             ;
+; sseg_counter:counter_3|ticks[18] ; sseg_counter:counter_3|digit[0] ; 3.176             ;
+; sseg_counter:counter_3|ticks[10] ; sseg_counter:counter_3|digit[0] ; 3.176             ;
+; sseg_counter:counter_3|ticks[9]  ; sseg_counter:counter_3|digit[0] ; 3.176             ;
+; sseg_counter:counter_3|ticks[8]  ; sseg_counter:counter_3|digit[0] ; 3.176             ;
+; sseg_counter:counter_3|ticks[7]  ; sseg_counter:counter_3|digit[0] ; 3.176             ;
+; sseg_counter:counter_3|ticks[6]  ; sseg_counter:counter_3|digit[0] ; 3.176             ;
+; sseg_counter:counter_3|ticks[5]  ; sseg_counter:counter_3|digit[0] ; 3.176             ;
+; sseg_counter:counter_3|ticks[4]  ; sseg_counter:counter_3|digit[0] ; 3.176             ;
+; sseg_counter:counter_3|ticks[3]  ; sseg_counter:counter_3|digit[0] ; 3.176             ;
+; sseg_counter:counter_3|ticks[2]  ; sseg_counter:counter_3|digit[0] ; 3.176             ;
+; sseg_counter:counter_3|ticks[1]  ; sseg_counter:counter_3|digit[0] ; 3.176             ;
+; sseg_counter:counter_3|ticks[0]  ; sseg_counter:counter_3|digit[0] ; 3.176             ;
+; sseg_counter:counter_3|ticks[11] ; sseg_counter:counter_3|digit[0] ; 3.176             ;
+; sseg_counter:counter_3|ticks[25] ; sseg_counter:counter_3|digit[0] ; 3.176             ;
+; sseg_counter:counter_1|ticks[25] ; sseg_counter:counter_1|digit[0] ; 3.176             ;
+; sseg_counter:counter_1|ticks[26] ; sseg_counter:counter_1|digit[0] ; 3.176             ;
+; sseg_counter:counter_1|ticks[22] ; sseg_counter:counter_1|digit[0] ; 3.176             ;
+; sseg_counter:counter_1|ticks[21] ; sseg_counter:counter_1|digit[0] ; 3.176             ;
+; sseg_counter:counter_1|ticks[20] ; sseg_counter:counter_1|digit[0] ; 3.176             ;
+; sseg_counter:counter_1|ticks[19] ; sseg_counter:counter_1|digit[0] ; 3.176             ;
+; sseg_counter:counter_1|ticks[23] ; sseg_counter:counter_1|digit[0] ; 3.176             ;
+; sseg_counter:counter_1|ticks[18] ; sseg_counter:counter_1|digit[0] ; 3.176             ;
+; sseg_counter:counter_1|ticks[16] ; sseg_counter:counter_1|digit[0] ; 3.176             ;
+; sseg_counter:counter_1|ticks[17] ; sseg_counter:counter_1|digit[0] ; 3.176             ;
+; sseg_counter:counter_1|ticks[15] ; sseg_counter:counter_1|digit[0] ; 3.176             ;
+; sseg_counter:counter_1|ticks[14] ; sseg_counter:counter_1|digit[0] ; 3.176             ;
+; sseg_counter:counter_1|ticks[13] ; sseg_counter:counter_1|digit[0] ; 3.176             ;
+; sseg_counter:counter_1|ticks[12] ; sseg_counter:counter_1|digit[0] ; 3.176             ;
+; sseg_counter:counter_1|ticks[11] ; sseg_counter:counter_1|digit[0] ; 3.176             ;
+; sseg_counter:counter_1|ticks[10] ; sseg_counter:counter_1|digit[0] ; 3.176             ;
+; sseg_counter:counter_1|ticks[9]  ; sseg_counter:counter_1|digit[0] ; 3.176             ;
+; sseg_counter:counter_1|ticks[8]  ; sseg_counter:counter_1|digit[0] ; 3.176             ;
+; sseg_counter:counter_1|ticks[6]  ; sseg_counter:counter_1|digit[0] ; 3.176             ;
+; sseg_counter:counter_1|ticks[5]  ; sseg_counter:counter_1|digit[0] ; 3.176             ;
+; sseg_counter:counter_1|ticks[4]  ; sseg_counter:counter_1|digit[0] ; 3.176             ;
+; sseg_counter:counter_1|ticks[3]  ; sseg_counter:counter_1|digit[0] ; 3.176             ;
+; sseg_counter:counter_1|ticks[2]  ; sseg_counter:counter_1|digit[0] ; 3.176             ;
+; sseg_counter:counter_1|ticks[1]  ; sseg_counter:counter_1|digit[0] ; 3.176             ;
+; sseg_counter:counter_1|ticks[0]  ; sseg_counter:counter_1|digit[0] ; 3.176             ;
+; sseg_counter:counter_1|ticks[7]  ; sseg_counter:counter_1|digit[0] ; 3.176             ;
+; sseg_counter:counter_1|ticks[24] ; sseg_counter:counter_1|digit[0] ; 3.176             ;
+; sseg_counter:counter_4|ticks[25] ; sseg_counter:counter_4|digit[0] ; 3.171             ;
+; sseg_counter:counter_4|ticks[26] ; sseg_counter:counter_4|digit[0] ; 3.171             ;
+; sseg_counter:counter_4|ticks[22] ; sseg_counter:counter_4|digit[0] ; 3.171             ;
+; sseg_counter:counter_4|ticks[21] ; sseg_counter:counter_4|digit[0] ; 3.171             ;
+; sseg_counter:counter_4|ticks[23] ; sseg_counter:counter_4|digit[0] ; 3.171             ;
+; sseg_counter:counter_4|ticks[19] ; sseg_counter:counter_4|digit[0] ; 3.171             ;
+; sseg_counter:counter_4|ticks[18] ; sseg_counter:counter_4|digit[0] ; 3.171             ;
+; sseg_counter:counter_4|ticks[17] ; sseg_counter:counter_4|digit[0] ; 3.171             ;
+; sseg_counter:counter_4|ticks[16] ; sseg_counter:counter_4|digit[0] ; 3.171             ;
+; sseg_counter:counter_4|ticks[15] ; sseg_counter:counter_4|digit[0] ; 3.171             ;
+; sseg_counter:counter_4|ticks[14] ; sseg_counter:counter_4|digit[0] ; 3.171             ;
+; sseg_counter:counter_4|ticks[13] ; sseg_counter:counter_4|digit[0] ; 3.171             ;
+; sseg_counter:counter_4|ticks[12] ; sseg_counter:counter_4|digit[0] ; 3.171             ;
+; sseg_counter:counter_4|ticks[11] ; sseg_counter:counter_4|digit[0] ; 3.171             ;
+; sseg_counter:counter_4|ticks[20] ; sseg_counter:counter_4|digit[0] ; 3.171             ;
+; sseg_counter:counter_4|ticks[9]  ; sseg_counter:counter_4|digit[0] ; 3.171             ;
+; sseg_counter:counter_4|ticks[8]  ; sseg_counter:counter_4|digit[0] ; 3.171             ;
+; sseg_counter:counter_4|ticks[7]  ; sseg_counter:counter_4|digit[0] ; 3.171             ;
++----------------------------------+---------------------------------+-------------------+
 Note: This table only shows the top 100 path(s) that have the largest delay added for hold.
 
 
@@ -2294,7 +2279,7 @@ Note: This table only shows the top 100 path(s) that have the largest delay adde
 ; Fitter Messages ;
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (119006): Selected device 5CSEMA5F31C6 for design "stopwatch_top"
 Info (21076): High junction temperature operating condition is not set. Assuming a default value of '85'.
 Info (21076): Low junction temperature operating condition is not set. Assuming a default value of '0'.
@@ -2307,9 +2292,9 @@ Warning (292013): Feature LogicLock is only available with a valid subscription 
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
 Info (184020): Starting Fitter periphery placement operations
 Info (11178): Promoted 1 clock (1 global)
-    Info (11162): sseg_counter:counter_1|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0]~CLKENA0 with 124 fanout uses global clock CLKCTRL_G5
+    Info (11162): sseg_counter:counter_1|PLL:CLK_10MHz|PLL_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0]~CLKENA0 with 124 fanout uses global clock CLKCTRL_G3
 Info (11191): Automatically promoted 1 clock (1 global)
-    Info (11162): CLOCK_50~inputCLKENA0 with 2 fanout uses global clock CLKCTRL_G6
+    Info (11162): CLOCK_50~inputCLKENA0 with 2 fanout uses global clock CLKCTRL_G4
 Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'stopwatch_top.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained generated clocks found in the design
@@ -2461,10 +2446,10 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "VGA_R[7]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_SYNC_N" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_VS" is assigned to location or region, but does not exist in design
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:14
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:13
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:02
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
@@ -2475,24 +2460,24 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.51 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.39 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:04
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
-Info (144001): Generated suppressed messages file C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/output_files/stopwatch_top.fit.smsg
+Info (144001): Generated suppressed messages file /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/output_files/stopwatch_top.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 145 warnings
-    Info: Peak virtual memory: 6567 megabytes
-    Info: Processing ended: Mon Aug 19 22:20:37 2024
-    Info: Elapsed time: 00:00:41
-    Info: Total CPU time (on all processors): 00:01:03
+    Info: Peak virtual memory: 1584 megabytes
+    Info: Processing ended: Wed Feb 26 20:58:16 2025
+    Info: Elapsed time: 00:00:42
+    Info: Total CPU time (on all processors): 00:01:01
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/ojakinlade/Documents/Terasic-DE1-SoC-Projects/projects/P2_Stopwatch/output_files/stopwatch_top.fit.smsg.
+The suppressed messages can be found in /home/joseph/Documents/Terasic-DE1-SoC-Projects/Projects/P2_Stopwatch/output_files/stopwatch_top.fit.smsg.
 
 
